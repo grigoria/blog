@@ -1,0 +1,56 @@
+// General classes
+
+a.btn {
+	font-size: 17px;
+}
+
+// Header
+
+header {
+
+	h2 {
+		display: none;
+	}
+}
+
+// Main Article 
+
+article {
+
+  h4 {
+    font-size: 24px;
+  }
+
+  p {
+  	font-size: 17px;
+  }
+
+  .read-more {
+  	font-size: 13px;
+  }
+}
+
+// Footer
+
+footer {
+
+  &.wrapper {
+    margin-top: $vr;
+  }
+}
+
+// POSTS
+
+#posts {
+
+	article {
+
+		h4 {
+			font-size: 30px;
+		}
+
+		.tags {
+			margin-bottom: 25px;
+		}
+	}
+}

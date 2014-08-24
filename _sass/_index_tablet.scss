@@ -1,0 +1,48 @@
+#about-me {
+
+	.description {
+		max-height: 323px;
+
+		p {
+			font-size: 20px;
+		}
+
+		section {
+			margin-right: 280px;
+			padding: 40px 40px 0 0;
+		}
+	}
+
+	.social {
+		width: 279px;
+
+		img {
+			max-height: 170px;
+		}
+
+		ul {
+
+			li {
+
+				a {
+					padding: 25px 0 0 13px;
+					font-size: 30px;
+				}
+
+        &:nth-child(3) a {
+          padding-left: 15px;
+        }
+
+        &:nth-child(4) a {
+          font-size: 40px;
+          padding-left: 7px;
+          padding-top: 19px;
+        }
+			}
+		}
+	}
+}
+
+#main {
+	margin-top: 300px;
+}
