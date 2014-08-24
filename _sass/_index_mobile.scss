@@ -1,0 +1,25 @@
+#about-me {
+  background: $grey;
+
+  .description {
+    float: none;
+    max-height: none;
+
+    section {
+      margin-right: 0;
+      padding: 20px 0 0 0;
+    }
+  }
+
+  .social {
+    display: none;
+  }
+}
+
+#main {
+  margin-top: 260px;
+
+  .articles-list {
+    margin-top: 30px;
+  }
+}
