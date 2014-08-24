@@ -1,0 +1,58 @@
+// Colors
+
+$white: #fefefb;  
+$grey: #f6f6f6;
+$grey2: #444;
+$grey3: #333;
+$fuchsia: #e84e5b;
+$green: #4ecdc4;
+$black: #282828;
+
+$tag: #808080; //to be used for tags
+
+$link: $fuchsia;
+$email: #06a4e5;
+$facebook: #3b5998;
+$linkedin: #4875b4;
+$twitter: #55acee;
+$github: #4183c4;
+
+// Mixins
+
+@mixin transition($p, $t, $m) {
+  -webkit-transition: $p $t $m;
+  -moz-transition: $p $t $m;
+  -ms-transition: $p $t $m;
+  -o-transition: $p $t $m;
+  transition: $p $t $m;
+}
+
+@mixin border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// Grid
+
+$vr: 40px;
+
+body {
+  background: $white;
+}
+
+p {
+  color: $black;
+  line-height: 1.5;
+}
+
+a,
+a:visited {
+  color: $link;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $green;
+  @include transition(all, .3s, ease);
+}

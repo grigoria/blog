@@ -2,21 +2,70 @@
 layout: default
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1> 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div id="about-me">
+  <div class="wrapper cf">
+    <div class="social">
+      <img src="images/moi.jpg" />
+      <ul class="cf">
+        <li>
+          <a class="icon-email" target="_blank" href="mailto:grigoria.pontiki@gmail.com"></a>
+        </li>
+        <li>
+          <a class="icon-twitter" target="_blank" href="https://twitter.com/grigoriap"></a>
+        </li>
+        <li>
+          <a class="icon-linkedin" target="_blank" href="https://gr.linkedin.com/pub/grigoria-pontiki/39/3a9/ab9/"></a>
+        </li>
+        <li>
+          <a class="icon-github" target="_blank" href="https://github.com/grigoria"></a>
+        </li>
+      </ul>
+    </div>
+    <div class="description">
+      <section>
+        <p>I'm a frontend engineer living in Athens. Currently I design and implement user interfaces at Skroutz.gr, the leading price comparison engine in Greece.</p>
+        <p><a href="#" target="_blank" rel="external">Follow me on twitter</a> or <a href="#" target="_blank" rel="external">drop me a line</a>.</p>     
+      </section>
+    </div>
+  </div>
 </div>
+
+<div id="main">
+  <div class="wrapper">
+    <ul class="articles-list">
+      {% for post in site.posts limit 10 %}
+        <li>
+          <article class="cf">
+            <h4>
+              <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+            </h4>
+            <p class="tags">
+              {% for tag in post.tags %}
+                <span class="icon-tag">{{tag}}</span>
+              {% endfor %}
+              <span class="icon-calendar">{{ post.date | date_to_string }}</span>
+            </p>
+            {{ post.content | truncatewords:100}}</p>
+            <a href="{{ post.url }}" class="btn">read more</a>
+          </article>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+  window.onload = (function(){
+    $(window).scroll(function () { 
+      if( $(window).scrollTop() > 380 ) {
+        $(".social-header").addClass("is-visible");
+        $(".social-header").removeClass("is-hidden");
+      }
+      if( $(window).scrollTop() < 380 ) {
+        $(".social-header").removeClass("is-visible");
+        $(".social-header").addClass("is-hidden");
+      }
+    })
+  })
+</script>

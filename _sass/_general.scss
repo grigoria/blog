@@ -1,0 +1,362 @@
+// Animations 
+
+@-moz-keyframes slideIn { // Slide In
+    0% {
+      top: -60px;
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+      top: 0;
+    }
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+      top: -60px;
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+      top: 0;
+    }
+}
+
+@-o-keyframes slideIn {
+    0% {
+      top: -60px;
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+      top: 0;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+      top: -60px;
+    }
+    100% {
+      top: 0;
+    }
+}
+
+// Typography
+
+p {
+  font-size: 16px;
+  margin-bottom: $vr/2;
+}
+
+::selection {
+  background: $green;
+  color: $white;
+}
+
+::-moz-selection {
+  background: $green;
+  color: $white;
+  
+}
+
+// Layout
+
+.wrapper {
+  width: 96%;
+  max-width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+// Code 
+
+code {
+  display: block;
+  background: #404040;
+  padding: $vr $vr/2;
+  margin: $vr 0;
+  color: $white;
+  font-size: 14px;
+  line-height: 1.6;
+  border-radius: 3px;
+  font-family: monaco, sans-serif;
+
+  span {
+    color: #87db0d;
+  }
+
+  em {
+    color: #60d9f1;
+  }
+
+  b {
+    color: #af7dff;
+  }
+}
+
+// General classes
+
+.cf {
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+.is-hidden {
+  display: none;
+}
+
+.is-visible {
+  display: block;
+}
+
+.left {
+  float: left !important;
+}
+
+a.btn {
+  float: right;
+  background: $link;
+  border-bottom: 2px solid darken($link, 15%);
+  color: $white;
+  padding: $vr/4 $vr/2;
+  font-family: $franklin;
+  font-size: 19px;
+
+  &:hover {
+    background: $green;
+    border-bottom: 2px solid darken($green, 15%);
+  }
+}
+
+// Tag
+
+.icon-tag,
+.icon-calendar {
+  position: relative;
+  display: inline-block;
+  font-size: 13px;
+  color: $tag;
+  margin-right: $vr/2;
+  padding-left: 20px;
+
+  &:before {
+    position: absolute;
+    top: 4px;
+    left: 0;
+  }
+}
+
+// Header
+
+header {
+  width: 100%;
+  background: $black;
+  padding: 10px 0;
+  position: fixed;
+  z-index: 10;
+  height: 37px;
+  font-family: $freight;
+
+  & + * {
+    padding-top: 55px;
+  }
+
+  h1 {
+    font-size: 22px;
+    line-height: 29px;
+    margin: 2px 10px 0 0;
+
+    a,
+    a:visited {
+      color: $white;
+    }
+  }
+
+  h2 {
+    margin-top: 11px;
+    font-size: 15px;
+
+    a,
+    a:visited {
+      color: $white;
+    }
+  }
+
+  h1,
+  h2 {
+    float: left;
+    color: $white;
+    font-weight: 300;
+  }
+}
+
+// Footer
+
+footer {
+  text-align: center;
+  padding-top: $vr/2;
+  border-top: 1px solid lighten($green, 30%);
+
+  &.wrapper {
+    margin-top: $vr*2;
+  }
+
+  p {
+    font-size: 13px;
+    color: $green;
+    font-family: $freight;
+
+    em {
+      font-style: italic;
+    }
+  }
+}
+
+// Social links in header
+
+.social-header {
+  float: right;
+
+  li {
+    float: left;
+    margin: 0 7px;
+
+    &:first-child a {
+      background: $email;
+      -webkit-animation: slideIn .6s;
+    }
+
+    &:nth-child(2) a {
+      background: $twitter;
+      padding: 11px 8px 9px;
+      -webkit-animation: slideIn .7s;
+    }
+
+    &:nth-child(3) a {
+      background: $linkedin;
+      padding: 10px 7px 10px 9px;
+      -webkit-animation: slideIn 1s;
+    }
+
+    &:nth-child(4) a {
+      background: $github;
+      font-size: 25px;
+      padding: 6px 3px 7px 4px;
+      -webkit-animation: slideIn 1s;
+    }
+
+    a {
+      display: block;
+      position: relative;
+      border-radius: 100%;
+      padding: 10px 8px;
+      color: $white;
+      font-size: 18px;
+
+      &:hover {
+        background: $green;
+      }
+    }
+  }
+
+  #posts & {
+    display: block;
+  }
+}
+
+// Main Article 
+
+article {
+  margin-bottom: $vr;
+
+  h4 {
+    font-size: 28px;
+    font-family: $franklin;
+    color: $grey2;
+  }
+
+  .content {
+    margin-bottom: $vr*1.5;
+  }
+
+  p {
+    font-size: 19px;
+    line-height: 1.6;
+    font-family: $freight;
+    color: $grey3;
+
+    &.tags {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+// POSTS
+
+#posts {
+
+  header {
+    background: $fuchsia;
+  }
+
+  article {
+
+    h4 {
+      margin-top: $vr*1.5;
+      font-size: 32px;
+    }
+
+    .tags {
+      margin-bottom: $vr;
+    }
+  }
+
+  .previous-article {
+    float: left;
+    padding-left: $vr/2;
+    text-align: left;
+
+    &:after {
+      content: "\2039";
+      left: 0;
+    }
+  }
+
+  .next-article {
+    float: right;
+    padding-right: $vr/2;
+    text-align: right;
+
+    &:after {
+      content: "\203A";
+      right: 0;
+    }
+  }
+}
+
+
+/* Media Queries: Tablet devices overwrite 641px...960px */
+ 
+@media only screen and (max-width:960px) {
+  @import "general_tablet";
+}
+
+/* Media Queries: Tablet devices overwrite 641px...960px */
+ 
+@media only screen and (max-width:960px) {
+  @import "general_mobile";
+}
+
+

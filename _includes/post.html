@@ -1,0 +1,19 @@
+<h4>{{page.title}}</h4>
+
+<p class="tags">
+  {% for tag in page.tags %}
+    <span class="icon-tag">{{tag}}</span>
+  {% endfor %}
+  <span class="icon-calendar">{{ page.date | date_to_string }}</span>
+</p>
+
+<div class="content">
+	{{ content }}
+</div>
+
+<a href="{{ page.previous.url }}" class="left btn">Previous Post</a>
+{% if page.next %}
+  <a href="{{ page.next.url }}" class="btn">Next Post</a>
+{% else %}
+  <a href="/" class="btn">Home</a>
+{% endif %}
