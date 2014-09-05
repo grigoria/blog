@@ -24,7 +24,7 @@ layout: default
     <div class="description">
       <section>
         <p>I'm a frontend engineer living in Athens. Currently I design and implement user interfaces at Skroutz.gr, the leading price comparison engine in Greece.</p>
-        <p><a href="#" target="_blank" rel="external">Follow me on twitter</a> or <a href="#" target="_blank" rel="external">drop me a line</a>.</p>     
+        <p><a href="https://twitter.com/grigoriap" target="_blank" rel="external">Follow me on twitter</a> or <a href="mailto:grigoria.pontiki@gmail.com" target="_blank" rel="external">drop me a line</a>.</p>     
       </section>
     </div>
   </div>
@@ -56,13 +56,17 @@ layout: default
 
 <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript">
+
   window.onload = (function(){
     $(window).scroll(function () { 
-      if( $(window).scrollTop() > 380 ) {
+      var topDist = $(document).scrollTop();
+          $('#about-me').css('margin-top', (topDist/10)*9);
+
+      if( $(window).scrollTop() > 140 ) {
         $(".social-header").addClass("is-visible");
         $(".social-header").removeClass("is-hidden");
       }
-      if( $(window).scrollTop() < 380 ) {
+      if( $(window).scrollTop() < 140 ) {
         $(".social-header").removeClass("is-visible");
         $(".social-header").addClass("is-hidden");
       }
