@@ -98,6 +98,10 @@ code {
   }
 }
 
+.jsfiddle {
+  margin: 40px 0;
+}
+
 // General classes
 
 .cf {
@@ -314,13 +318,22 @@ article {
 
   article {
 
-    h4 {
-      margin-top: $vr*1.5;
-      font-size: 32px;
+    .title {
+      margin-right: 100px;
+
+      h4 {
+        margin-top: $vr*1.5;
+        font-size: 32px;
+      }
+
+      .tags {
+        margin-bottom: $vr;
+      }
     }
 
-    .tags {
-      margin-bottom: $vr;
+    .tweet-this {
+        float: right;
+        margin-top: 65px;
     }
   }
 
