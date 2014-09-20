@@ -63,6 +63,10 @@ p {
   
 }
 
+ol {
+  list-style-position: inside;
+}
+
 // Layout
 
 .wrapper {
@@ -95,6 +99,32 @@ code {
 
   b {
     color: #af7dff;
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+blockquote {
+  border-left: 7px solid $grey4;
+  margin: $vr/2 0;
+  padding: $vr/4;
+  quotes: "\201C""\201D""\2018""\2019";
+  font-size: 17px;
+  line-height: 1.6;
+  font-family: $freight;
+  color: $grey3;
+  font-style: italic;
+
+  &:before {
+    color: $grey4;
+    content: open-quote;
+    font-size: 60px;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+    font-style: normal;
   }
 }
 
@@ -185,6 +215,7 @@ header {
 
     a,
     a:visited {
+      @include transition(all, 0, ease);
       color: $white;
     }
   }
@@ -195,6 +226,7 @@ header {
 
     a,
     a:visited {
+      @include transition(all, 0, ease);
       color: $white;
     }
   }
@@ -286,18 +318,30 @@ footer {
 article {
   margin-bottom: $vr;
 
-  h4 {
+  h4,
+  h5 {
     font-size: 30px;
     font-family: $franklin;
     color: $grey2;
+  }
+
+  h5 {
+    font-size: 20px;
+    font-family: $freight;
+    color: $grey2;
+    padding-bottom: $vr/2;
+    margin: $vr 0 $vr/2;
+    border-bottom: 1px solid $grey4;
   }
 
   .content {
     margin-bottom: $vr*1.5;
   }
 
-  p {
-    font-size: 19px;
+  p,
+  ul,
+  ol {
+    font-size: 18px;
     line-height: 1.6;
     font-family: $freight;
     color: $grey3;
@@ -305,6 +349,23 @@ article {
     &.tags {
       margin-bottom: 15px;
     }
+  }
+
+  ul,
+  ol {
+    list-style-position: inside;
+
+    li {
+      margin-bottom: $vr/4;
+    }
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
   }
 }
 
