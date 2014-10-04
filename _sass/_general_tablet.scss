@@ -4,6 +4,10 @@ a.btn {
 	font-size: 17px;
 }
 
+blockquote {
+  font-size: 17px;
+}
+
 // Header
 
 header {
@@ -18,11 +22,15 @@ header {
 article {
 
   h4 {
-    font-size: 24px;
+    font-size: 32px;
   }
 
   p {
-  	font-size: 17px;
+  	font-size: 18px;
+
+    &.tags {
+      margin-bottom: $vr/2;
+    }
   }
 
   .read-more {
@@ -45,12 +53,39 @@ footer {
 
 	article {
 
+    .title {
+      margin-right: 100px;
+    }
+
 		h4 {
-			font-size: 30px;
+			font-size: 35px;
+      margin-bottom: $vr/4;
 		}
 
-		.tags {
-			margin-bottom: 25px;
-		}
+		.sidebar {
+      float: none;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: $vr;
+      position: relative;
+
+      .tweet-this {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        float: right;
+      }
+    }
+
+    .content {
+
+      > * {
+        margin-left: 0;
+      }
+
+      p:first-of-type {
+        font-size: 22px;
+      }
+    }
 	}
 }

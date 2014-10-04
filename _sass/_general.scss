@@ -49,7 +49,7 @@
 
 p {
   font-size: 16px;
-  margin-bottom: $vr/2;
+  margin-bottom: 1.3em;
 }
 
 ::selection {
@@ -111,7 +111,7 @@ blockquote {
   margin: $vr/2 0;
   padding: $vr/4;
   quotes: "\201C""\201D""\2018""\2019";
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.6;
   font-family: $freight;
   color: $grey3;
@@ -318,37 +318,19 @@ footer {
 article {
   margin-bottom: $vr;
 
-  h4,
-  h5 {
-    font-size: 30px;
+  h4 {
     font-family: $franklin;
     color: $grey2;
-  }
-
-  h5 {
-    font-size: 20px;
-    font-family: $freight;
-    color: $grey2;
-    padding-bottom: $vr/2;
-    margin: $vr 0 $vr/2;
-    border-bottom: 1px solid $grey4;
-  }
-
-  .content {
-    margin-bottom: $vr*1.5;
+    font-size: 34px;
   }
 
   p,
   ul,
   ol {
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 20px;
+    line-height: 1.5;
     font-family: $freight;
     color: $grey3;
-
-    &.tags {
-      margin-bottom: 15px;
-    }
   }
 
   ul,
@@ -375,26 +357,59 @@ article {
 
   header {
     background: $fuchsia;
+
+    &:after {
+      width: 100%;
+      height: 30px;
+      position: absolute;
+      bottom: -30px;
+      background: -moz-linear-gradient(top,  rgba(254,254,251,1) 0%, rgba(254,254,251,0) 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(254,254,251,1)), color-stop(100%,rgba(254,254,251,0)));
+      background: -webkit-linear-gradient(top,  rgba(254,254,251,1) 0%,rgba(254,254,251,0) 100%);
+      background: -o-linear-gradient(top,  rgba(254,254,251,1) 0%,rgba(254,254,251,0) 100%);
+      background: -ms-linear-gradient(top,  rgba(254,254,251,1) 0%,rgba(254,254,251,0) 100%);
+      background: linear-gradient(to bottom,  rgba(254,254,251,1) 0%,rgba(254,254,251,0) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefb', endColorstr='#00fefefb',GradientType=0 );
+    }
   }
 
   article {
 
-    .title {
-      margin-right: 100px;
-
-      h4 {
-        margin-top: $vr*1.5;
-        font-size: 32px;
-      }
-
-      .tags {
-        margin-bottom: $vr;
-      }
+    h4 {
+      margin-top: $vr*1.5;
+      font-size: 39px;
+      margin-bottom: $vr*1.5;
     }
 
-    .tweet-this {
-        float: right;
-        margin-top: 65px;
+    h5 {
+      font-size: 24px;
+      font-family: $freight;
+      color: $grey2;
+      padding-bottom: $vr/2;
+      margin: $vr 0 $vr/2;
+      border-bottom: 1px solid $grey4;
+    }
+
+    .sidebar {
+      float: left;
+      width: 200px;
+      margin-right: -100%;
+    }
+
+    .content {
+      width: 100%;
+      margin-bottom: $vr*1.5;
+
+      > * {
+        margin-left: 240px;
+      }
+
+      p:first-of-type {
+        font-family: $neuton;
+        font-size: 24px;
+        line-height: 1.5;
+        margin-bottom: $vr;
+      }
     }
   }
 

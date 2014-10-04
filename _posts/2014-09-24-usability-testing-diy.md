@@ -5,8 +5,7 @@ date:   2014-09-24 23:41:20
 tags: ux
 ---
 
-Ok this is going to be a big wall of text. 
-
+Ok this is going to be a big wall of text. <br /><br />
 I decided to write this post as I have read a lot about usability testing but I have conducted very few tests, so things are a bit fuzzy in my head. Of course, in our everyday life we test usability: we watch people using their mobile phones, we watch them using our website or other people's sites. This post, except being written from a theoritical standpoint, it is a very short summary of two books: "Rocket surgery made easy" by Steve Krug, and "Observing the user experience", by Elizabeth Goodman, Mike Kuniavsky and Andrea Moed. Also, if you have read the A List Apart's <a href="http://alistapart.com/article/usability-testing-demystified" target="_blank">great blog post</a> about usability testing, you will notice many similarities.
 
 During a usability test, you watch people use what you or your team have built. The usability test will tell you whether your audience can use what you have made. It helps identify problems people have with a specific interface and reveals difficult-to-complete tasks. 
