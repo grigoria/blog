@@ -45,7 +45,7 @@ layout: default
               {% endfor %}
               <span class="icon-calendar">{{ post.date | date_to_string }}</span>
             </p>
-            {{ post.content | truncatewords:100}}</p>
+            {{ post.content | truncatewords:60}}</p>
             <a href="{{ post.url }}" class="btn">read more</a>
           </article>
         </li>
