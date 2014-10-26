@@ -1,7 +1,176 @@
+$vr: 40px;
+$kepler: "kepler-std", serif;
+$nimbus: "nimbus-sans",sans-serif;
+
 #cv {
+  color: #444;
 
   &.wrapper {
-    max-width: 600px;
+    max-width: 680px;
     width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: $vr;
+  }
+
+  .about-me {
+    font-family: $kepler;
+    color: $grey2;
+    font-size: 22px;
+    font-weight: 300;
+    margin: $vr 0 $vr*2;
+  }
+}
+
+header {
+  padding: $vr*1.5 0;
+
+  h1 {
+    font-family: $kepler;
+    font-weight: 300;
+    font-size: 50px;
+    color: $tag;
+    padding-bottom: 25px;
+    margin-bottom: $vr/4;
+    border-bottom: 1px solid $grey4;
+    text-align: center;
+  }
+
+  ul {
+    font-family: $nimbus;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      font-size: 14px;
+      padding-left: 20px;
+      position: relative;
+      margin-right: $vr;
+      color: $tag;
+
+      &:before {
+        color: $fuchsia;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &:nth-child(2) {
+        padding-left: 25px;
+
+        &:before {
+          top: 1px;
+        }
+      }
+
+      &:nth-child(3) {
+        padding-left: 22px;
+
+        &:before {
+          font-size: 11px;
+          top: 3px;
+        }
+      }
+
+      &:nth-child(4) {
+        padding-left: 23px;
+
+        &:before {
+          top: 1px;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a,
+      a:visited {
+        color: $tag;
+
+        &:hover {
+          color: $fuchsia;
+        }
+      }
+    }
+  }
+}
+
+section {
+  margin: $vr 0;
+  font-size: 17px;
+  line-height: 1.5;
+  font-family: $nimbus;
+  font-weight: 300;
+
+  h2 {
+    color: $fuchsia;
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: $vr/2;
+    border-bottom: 1px solid $fuchsia;
+    text-transform: uppercase;
+  }
+
+  ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-top: 10px;
+
+    li {
+      margin-bottom: 10px;
+
+      a {
+        color: $grey2 !important;
+        border-bottom: 1px dotted $grey2;
+        @include transition(all, .3s, ease);
+
+        &:hover {
+          border-bottom-style: solid;
+        }
+      }
+    }
+
+    ul {
+      padding-left: $vr;
+      list-style-type: circle;
+    }
+  }
+
+  dt {
+    font-weight: 400;
+    margin-bottom: $vr/4;
+    padding-bottom: 5px;
+  }
+
+  dd {
+    margin-bottom: $vr/2;
+    padding-bottom: $vr/2;
+    border-bottom: 1px dotted $tag;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  small {
+    font-size: 14px;
+  }
+}
+
+.linkedin {
+  display: block;
+  text-align: center;
+  margin: $vr*1.5 0 $vr;
+}
+
+
+/* Media Queries: MOBILE */
+
+@media only screen and (max-width:680px) {
+
+  #cv.wrapper {
+    width: 98%;
   }
 }
