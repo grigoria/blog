@@ -6,9 +6,9 @@ tags: ux
 ---
 
 It's a fact: people won't use a website if they can't find their way around it. <br /><br />
-Looking for things in a website and looking for them in the "real" world have a lot of similarities. In many aspects of our life, we need signs of where we are and how we got there. We tend to search for sign guides while we browse, whether we are at the street,  a supermarket or in a metro station.
+Looking for things in a website and looking for them in the real world have a lot of similarities. In many aspects of our life, we need signs of where we are and how we got there. We tend to search for sign guides while we browse, whether we are at the street,  a supermarket or in a metro station.
 
-There are many signs in a website showing where we are. In my facebook profile page, I know where I am because I see my profile picture. In amazon, I see a large picture of the product, so I know I'm in the product's page.
+There are many signs in a website showing where we are. In my Facebook profile page, I know where I am because I see my profile picture. In Amazon, I see a large picture of the product, so I know I'm in the product's page.
 
 ##### Page title
 
@@ -66,7 +66,7 @@ Note: I use the word ‘active’ as often in css we use the class name ‘.acti
 
 ![Current page](/images/navigation/active.png)
 
-Letting the user know what section of the site they’re in, or what category they’re navigating through can be give a huge usability boost to any site. By highlighting the link of the current page, you let your users know what link they have clicked and in which page they are. That’s why your active navigation state should always be different from the default and hover state.
+Letting the user know what section of the site they’re in, or what category they’re navigating through can give a huge usability boost to any site. By highlighting the link of the current page, you let your users know what link they have clicked and in which page they are. That’s why your active navigation state should always be different from the default and hover state.
 
 ##### Back button
 
