@@ -429,6 +429,10 @@ article {
         margin-bottom: $vr;
       }
     }
+
+    img {
+      max-width: 100%;
+    }
   }
 
   .previous-article {
