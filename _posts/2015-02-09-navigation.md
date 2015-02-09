@@ -5,7 +5,7 @@ date:   2015-02-09 09:53:39
 tags: ux
 ---
 
-It's a fact: people won't use a website if they can't find their way around it. <br /><br />
+It's a fact<span id="char">:</span> people won't use a website if they can't find their way around it. <br /><br />
 Looking for things in a website and looking for them in the real world have a lot of similarities. In many aspects of our life, we need signs of where we are and how we got there. We tend to search for sign guides while we browse, whether we are at the street,  a supermarket or in a metro station.
 
 There are many signs in a website showing where we are. In my Facebook profile page, I know where I am because I see my profile picture. In Amazon, I see a large picture of the product, so I know I'm in the product's page.

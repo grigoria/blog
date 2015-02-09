@@ -424,7 +424,7 @@ article {
 
       p:first-of-type {
         font-family: $neuton;
-        font-size: 24px;
+        font-size: 26px;
         line-height: 1.5;
         margin-bottom: $vr;
       }
@@ -456,6 +456,11 @@ article {
       right: 0;
     }
   }
+}
+
+#char {
+  font-family: georgia, serif;
+  font-size: 22px;
 }
 
 
