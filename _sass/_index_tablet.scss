@@ -27,7 +27,17 @@
 				a {
 					padding: 25px 0 0 13px;
 					font-size: 30px;
+          height: 75px;
 				}
+
+        &:after {
+          height: 75px;
+          top: 75px;
+        }
+
+        &:nth-child(2) a {
+          padding-left: 13px;
+        }
 
         &:nth-child(3) a {
           padding-left: 15px;

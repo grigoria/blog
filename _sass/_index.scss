@@ -46,6 +46,7 @@
       margin-top: -2px;
 
       li {
+        position: relative;
 
         a {
           float: left;
@@ -56,31 +57,77 @@
           font-size: 36px;
           margin-top: -2px;
           padding: 20px 0 0 19px;
+          overflow: hidden;
           @include border-box;
+
+          &:before {
+            position: relative;
+            z-index: 9;
+          }
         }
 
-        &:first-child a {
-          background: $email;
-        }
-
-        &:nth-child(2) a {
-          background: $twitter;
-          padding-left: 16px;
-        }
-
-        &:nth-child(3) a {
-          background: $linkedin;
-        }
-
-        &:nth-child(4) a {
-          background: $github;
-          font-size: 44px;
-          padding-left: 13px;
-          padding-top: 18px;
-        }
-
-        &:hover a {
+        &:after { // hover action
+          content: "";
+          width: 25%;
+          height: 77px;
           background: $green;
+          position: absolute;
+          top: 78px;
+          @include transition(all, .1s, ease);
+
+        }
+
+        &:hover:after {
+          top: -2px;
+          z-index: 8;
+        }
+
+        &:first-child {
+
+          &:after {
+            left: 0;
+          }
+
+          a {
+            background: $email;
+          }
+        }
+
+        &:nth-child(2) {
+
+          &:after {
+            left: 25%;
+          }
+
+          a {
+            background: $twitter;
+            padding-left: 16px;
+          }
+        }
+
+        &:nth-child(3) {
+
+          &:after {
+            left: 50%;
+          }
+
+          a {
+            background: $linkedin;
+          }
+        }
+
+        &:nth-child(4) {
+
+          &:after {
+            left: 75%;
+          }
+
+          a {
+            background: $github;
+            font-size: 44px;
+            padding-left: 13px;
+            padding-top: 18px;
+          }
         }
       }
     }
@@ -93,7 +140,7 @@
   background: $white;
   position: relative;
   top: 20px;
-  z-index: 2;
+  z-index: 10;
 
   .articles-list {
     margin-top: $vr;
