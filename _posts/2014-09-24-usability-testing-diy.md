@@ -2,7 +2,7 @@
 layout: post
 title:  "Usability test - DIY"
 date:   2014-09-24 23:41:20
-tags: ux
+tags: ux ux usability-testing
 ---
 
 Ok this is going to be a big wall of text. <br /><br />
