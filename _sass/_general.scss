@@ -127,7 +127,7 @@ code:not(.language-css) {
 blockquote {
   border-left: 7px solid $grey4;
   margin: $vr/2 0;
-  padding: $vr/4;
+  padding: $vr/8 $vr/2;
   quotes: "\201C""\201D""\2018""\2019";
   font-size: 19px;
   line-height: 1.6;
@@ -144,6 +144,11 @@ blockquote {
     vertical-align: -0.4em;
     font-style: normal;
   }
+}
+
+#posts article .content blockquote p:first-of-type {
+  font-size: 22px;
+  margin-bottom: 0;
 }
 
 .jsfiddle {
@@ -458,9 +463,13 @@ article {
   }
 }
 
-#char {
+.char {
   font-family: georgia, serif;
-  font-size: 22px;
+  font-size: 18px;
+}
+
+p:first-of-type .char {
+  font-size: 20px;
 }
 
 
