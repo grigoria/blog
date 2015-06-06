@@ -20,11 +20,15 @@
 	{{ content }}
 </div>
 
-{% if page.previous %}
-<a href="{{ page.previous.url }}" class="left btn">Previous Post</a>
-{% endif %}
-{% if page.next %}
-  <a href="{{ page.next.url }}" class="btn">Next Post</a>
-{% else %}
-  <a href="/" class="btn">Home</a>
-{% endif %}
+<div class="cf">
+  {% if page.previous %}
+  <a href="{{ page.previous.url }}" class="left btn">Previous Post</a>
+  {% endif %}
+  {% if page.next %}
+    <a href="{{ page.next.url }}" class="btn">Next Post</a>
+  {% else %}
+    <a href="/" class="btn">Home</a>
+  {% endif %}
+</div>
+
+{% include disqus.html %}
