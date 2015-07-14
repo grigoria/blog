@@ -120,7 +120,7 @@ em {
 code:not(.language-css) {
   background: $grey;
   padding: 0 3px;
-  font-family: $courier;
+  font-family: $code-font;
   font-size: 18px;
 }
 
@@ -131,7 +131,7 @@ blockquote {
   quotes: "\201C""\201D""\2018""\2019";
   font-size: 19px;
   line-height: 1.6;
-  font-family: $freight;
+  font-family: $paragraph-font;
   color: $grey3;
   font-style: italic;
 
@@ -188,7 +188,7 @@ a.btn {
   border-bottom: 2px solid darken($link, 15%);
   color: $white;
   padding: $vr/4 $vr/2;
-  font-family: $franklin;
+  font-family: $headings-font;
   font-size: 19px;
 
   &:hover {
@@ -225,7 +225,7 @@ header {
   top: 0;
   z-index: 11;
   height: 37px;
-  font-family: $freight;
+  font-family: $paragraph-font;
 
   & + * {
     padding-top: 55px;
@@ -276,7 +276,7 @@ footer {
   p {
     font-size: 13px;
     color: $green;
-    font-family: $freight;
+    font-family: $paragraph-font;
 
     em {
       font-style: italic;
@@ -342,7 +342,7 @@ article {
   margin-bottom: $vr;
 
   h4 {
-    font-family: $franklin;
+    font-family: $headings-font;
     color: $grey2;
     font-size: 34px;
   }
@@ -352,7 +352,7 @@ article {
   ol {
     font-size: 20px;
     line-height: 1.5;
-    font-family: $freight;
+    font-family: $paragraph-font;
     color: $grey3;
   }
 
@@ -406,7 +406,7 @@ article {
 
     h5 {
       font-size: 24px;
-      font-family: $freight;
+      font-family: $paragraph-font;
       color: $grey2;
       padding-bottom: $vr/2;
       margin: $vr 0 $vr/2;
@@ -428,7 +428,7 @@ article {
       }
 
       p:first-of-type {
-        font-family: $neuton;
+        font-family: $about-me-font;
         font-size: 26px;
         line-height: 1.5;
         margin-bottom: $vr;
