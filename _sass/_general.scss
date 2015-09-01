@@ -344,13 +344,15 @@ article {
   h4 {
     font-family: $headings-font;
     color: $grey2;
-    font-size: 34px;
+    font-size: 29px;
+    font-weight: 300;
   }
 
   p,
   ul,
   ol {
     font-size: 20px;
+    font-weight: 300;
     line-height: 1.5;
     font-family: $paragraph-font;
     color: $grey3;
@@ -399,8 +401,8 @@ article {
   article {
 
     h4 {
-      margin-top: $vr*1.5;
-      font-size: 39px;
+      margin-top: $vr*2;
+      font-size: 32px;
       margin-bottom: $vr*1.5;
     }
 
@@ -425,13 +427,6 @@ article {
 
       > * {
         margin-left: 240px;
-      }
-
-      p:first-of-type {
-        font-family: $about-me-font;
-        font-size: 26px;
-        line-height: 1.5;
-        margin-bottom: $vr;
       }
     }
 
