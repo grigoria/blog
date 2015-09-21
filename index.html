@@ -2,34 +2,6 @@
 layout: default
 ---
 
-<div id="about-me">
-  <div class="wrapper cf">
-    <div class="social">
-      <img src="images/moi.jpg" />
-      <ul class="cf">
-        <li>
-          <a class="icon-email" target="_blank" href="mailto:grigoria.pontiki@gmail.com"></a>
-        </li>
-        <li>
-          <a class="icon-twitter" target="_blank" href="https://twitter.com/grigoriap"></a>
-        </li>
-        <li>
-          <a class="icon-linkedin" target="_blank" href="https://gr.linkedin.com/pub/grigoria-pontiki/39/3a9/ab9/"></a>
-        </li>
-        <li>
-          <a class="icon-github" target="_blank" href="https://github.com/grigoria"></a>
-        </li>
-      </ul>
-    </div>
-    <div class="description">
-      <section>
-        <p>I'm a frontend engineer living in Athens. Currently I design and implement user interfaces at Skroutz.gr, the leading price comparison engine in Greece.</p>
-        <p><a href="https://twitter.com/grigoriap" target="_blank" rel="external">Follow me on twitter</a> or <a href="mailto:grigoria.pontiki@gmail.com" target="_blank" rel="external">drop me a line</a>.</p>     
-      </section>
-    </div>
-  </div>
-</div>
-
 <div id="main">
   <div class="wrapper">
     <ul class="articles-list">
@@ -44,32 +16,14 @@ layout: default
                 <span class="icon-tag">{{tag}}</span>
               {% endfor %}
               <span class="icon-calendar">{{ post.date | date_to_string }}</span>
+              <a href="https://twitter.com/share" class="twitter-share-button" data-via="grigoriap" data-count="none">Tweet</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
             </p>
             {{ post.content | truncatewords:60}}</p>
-            <a href="{{ post.url }}" class="btn">read more</a>
+            <a href="{{ post.url }}" class="plus-link">read more</a>
           </article>
         </li>
       {% endfor %}
     </ul>
   </div>
 </div>
-
-<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript">
-
-  window.onload = (function(){
-    $(window).scroll(function () { 
-      var topDist = $(document).scrollTop();
-          $('#about-me').css('margin-top', (topDist/10)*9);
-
-      if( $(window).scrollTop() > 140 ) {
-        $(".social-header").addClass("is-visible");
-        $(".social-header").removeClass("is-hidden");
-      }
-      if( $(window).scrollTop() < 140 ) {
-        $(".social-header").removeClass("is-visible");
-        $(".social-header").addClass("is-hidden");
-      }
-    })
-  })
-</script>

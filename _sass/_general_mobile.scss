@@ -5,44 +5,6 @@ a.btn {
   padding: 6px 12px;
 }
 
-
-// Social links in header
-
-.social-header {
-
-  li {
-    margin: 0 4px;
-
-    &:first-child a {
-      font-size: 16px;
-      padding-bottom: 7px;
-    }
-
-    &:nth-child(2) a {
-      padding: 9px 6px 7px 4px;
-    }
-
-    &:nth-child(3) a {
-      padding: 7px 4px 9px 6px;
-    }
-
-    &:nth-child(4) a {
-      font-size: 20px;
-      padding: 5px 1px 5px 1px;
-    }
-
-    a {
-      font-size: 14px;
-      padding: 6px 4px;
-    }
-  }
-
-  &.is-hidden {
-    display: block;
-    margin-top: 3px;
-  }
-}
-
 // Main Article 
 
 article {
