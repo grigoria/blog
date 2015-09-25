@@ -1,0 +1,46 @@
+$source: "Source Sans Pro", serif;
+
+.wrapper {
+  width: 96%;
+  max-width: 780px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.cf {
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+header {
+
+  h1 {
+    float: left;
+    color: $fuchsia;
+    font-size: 20px;
+    font-family: $source;
+    font-weight: 400;
+    margin-top: 18px;
+  }
+
+  img {
+    float: left;
+    width: 35px;
+    margin: 10px;
+  }
+}
+
+nav {
+
+  li {
+    display: inline-block;
+  }
+}
