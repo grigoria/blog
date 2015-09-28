@@ -1,4 +1,4 @@
-Instalation & Usage
+Installation & Usage
 -------------------
 
 * Install gem:
