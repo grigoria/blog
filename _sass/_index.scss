@@ -3,6 +3,10 @@
 
   .articles-list {
     margin-top: $vr*2;
+
+    p {
+      margin-bottom: $vr/2;
+    }
   }
 }
 

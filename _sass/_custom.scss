@@ -5,9 +5,13 @@ $grey: #f6f6f6;
 $grey2: #444;
 $grey3: #333;
 $grey4: #ccc;
-$fuchsia: #e84e5b;
-$green: #4ecdc4;
+$grey5: #999;
 $black: #282828;
+
+$ecru: #f5f0e4;
+$fuchsia: #e84e5b;
+$yellow: #eac66f;
+$purple: #2a284d;
 
 $tag: #808080; //to be used for tags
 
@@ -54,6 +58,6 @@ a:visited {
 }
 
 a:hover {
-  color: $green;
+  color: $yellow;
   @include transition(all, .3s, ease);
 }

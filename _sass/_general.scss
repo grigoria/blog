@@ -2,16 +2,15 @@
 
 p {
   font-size: 16px;
-  margin-bottom: 1.3em;
+  margin-bottom: 20px;
 }
 
 ::selection {
-  background: $green;
-  color: $white;
+  background: $yellow;
 }
 
 ::-moz-selection {
-  background: $green;
+  background: $yellow;
   color: $white;
   
 }
@@ -99,11 +98,6 @@ blockquote {
   }
 }
 
-#posts article .content blockquote p:first-of-type {
-  font-size: 22px;
-  margin-bottom: 0;
-}
-
 .jsfiddle {
   margin: 40px 0;
 }
@@ -140,13 +134,13 @@ a.btn {
   background: $link;
   border-bottom: 2px solid darken($link, 15%);
   color: $white;
-  padding: $vr/4 $vr/2;
-  font-family: $headings-font;
-  font-size: 19px;
+  padding: 12px 30px;
+  font-family: $paragraph-font;
+  font-size: 15px;
 
   &:hover {
-    background: $green;
-    border-bottom: 2px solid darken($green, 15%);
+    background: $yellow;
+    border-bottom: 2px solid darken($yellow, 15%);
   }
 }
 
@@ -155,11 +149,13 @@ a.btn {
   position: relative;
   color: $fuchsia;
   padding-left: 15px;
+  font-family: $paragraph-font;
+  margin-top: -10px;
+  font-size: 15px;
 
   &:before {
     content: "+";
     position: absolute;
-    top: 1px;
     left: 0px;
   }
 }
@@ -185,21 +181,24 @@ a.btn {
 // Header
 
 header {
-  padding: 20px 0;
-  height: 37px;
+  padding: 30px 0;
   font-family: $paragraph-font;
+  font-weight: 300;
 
   h1 {
     float: left;
-    font-size: 22px;
+    font-size: 21px;
     margin: 7px 15px 10px 0;
 
     a,
     a:visited {
-      color: $black;
+      color: $grey2;
       @include transition(all, 0, ease);
     }
 
+    a:hover {
+      color: $yellow;
+    }
   }
 
   img {
@@ -214,14 +213,34 @@ header {
       display: inline-block;
       margin: 10px 20px;
       text-transform: uppercase;
+      font-size: 15px;
 
       a,
       a:visited {
-        color: $black;
+        color: $grey2;
+        position: relative;
       }
       
       a:hover {
-        color: $green;
+        color: $yellow;
+
+        &:before {
+          color: $yellow;
+        }
+      }
+
+      a:before {
+        content: "\2022";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        font-size: 12px;
+        color: $grey2;
+      }
+
+
+      a:not(.active):before {
+        display: none;
       }
     }
   }
@@ -231,7 +250,7 @@ header {
 
 footer {
   text-align: center;
-  padding-top: $vr/2;
+  padding: $vr/2 0 $vr*2;
 
   &.wrapper {
     margin-top: $vr*2;
@@ -241,30 +260,55 @@ footer {
 
     li {
       display: inline-block;
+
+      &:not(:last-of-type):after {
+        content: "\2022";
+        color: #bbb;
+        padding: 5px 10px;
+        font-size: 14px;
+      }
+
+      a {
+        display: inline-block;
+        font-size: 20px;
+
+        &:before {
+          color: $grey5;
+          @include transition(all, .3s, ease);
+        }
+
+        &:hover:before {
+          color: $yellow;
+        }
+      }
     }
+  }
+
+  .icon-twitter {
+    font-size: 17px;
   }
 }
 
 // Main Article 
 
 article {
-  margin-bottom: $vr;
+  margin-bottom: $vr*2;
 
   h4 {
     font-family: $headings-font;
     color: $grey2;
-    font-size: 29px;
+    font-size: 24px;
     font-weight: 300;
   }
 
   p,
   ul,
   ol {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
     line-height: 1.5;
     font-family: $paragraph-font;
-    color: $grey3;
+    color: #444;
   }
 
   ul,
@@ -293,7 +337,7 @@ article {
 
     h4 {
       margin-top: $vr*2;
-      font-size: 32px;
+      font-size: 26px;
       margin-bottom: $vr*1.5;
     }
 
@@ -304,6 +348,11 @@ article {
       padding-bottom: $vr/2;
       margin: $vr 0 $vr/2;
       border-bottom: 1px solid $grey4;
+    }
+
+    p {
+      font-size: 19px;
+      margin-bottom: 40px;
     }
 
     .sidebar {

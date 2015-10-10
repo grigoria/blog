@@ -4,11 +4,17 @@
       <a href="/">{{site.fullname}}</a>
     </h1>
     <img src="/images/moi.png" />
+    <!--
     <nav>
       <ul>
-        <li><a href="index.html">Blog</a></li>
-        <li><a href="cv.html">Resume</a></li>
+        <li>
+          <a href="/index.html" {% if page.url != '/cv.html' %} class="active"{% endif %}>Blog</a>
+        </li>
+        <li>
+          <a href="/cv.html">Resume</a>
+        </li>
       </ul>
     </nav>
+    -->
   </div>
 </header>
