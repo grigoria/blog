@@ -1,57 +1,8 @@
-// General classes
-
-a.btn {
-	font-size: 17px;
-}
-
-blockquote {
-  font-size: 17px;
-}
-
-// Main Article 
-
-article {
-
-  h4 {
-    font-size: 32px;
-  }
-
-  p {
-  	font-size: 18px;
-
-    &.tags {
-      margin-bottom: $vr/2;
-    }
-  }
-
-  .read-more {
-  	font-size: 13px;
-  }
-}
-
-// Footer
-
-footer {
-
-  &.wrapper {
-    margin-top: $vr;
-  }
-}
-
 // POSTS
 
 #posts {
 
 	article {
-
-    .title {
-      margin-right: 100px;
-    }
-
-		h4 {
-			font-size: 35px;
-      margin-bottom: $vr/4;
-		}
 
 		.sidebar {
       float: none;
@@ -61,21 +12,25 @@ footer {
       position: relative;
 
       .tweet-this {
-        position: absolute;
-        top: -40px;
-        right: 0;
-        float: right;
+        float: left;
       }
     }
 
+    h4 {
+      margin: 40px 0 10px;
+      line-height: 1.5;
+    }
+
+    .tags {
+      float: left;
+    }
+
     .content {
+      clear: both;
+      margin-top: 90px;
 
       > * {
         margin-left: 0;
-      }
-
-      p:first-of-type {
-        font-size: 22px;
       }
     }
 	}
