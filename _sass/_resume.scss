@@ -1,0 +1,261 @@
+@keyframes slideDown {
+    from {
+      bottom: -10px;
+    }
+    to {
+      bottom: -20px;
+    }
+}
+
+#resume {
+  font-family: $sans-serif;
+  height: 100%;
+
+  .wrapper {
+    overflow: visible;
+  }
+
+  > .wrapper {
+    height: 100%;
+    position: relative;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 17px;
+    color: $grey2;
+    margin-bottom: 2em;
+  }
+
+  li {
+    line-height: 2;
+  }
+
+  .more {
+    font-size: 17px;
+    margin-top: $vr/2;
+    display: inline-block;
+    @include transition(all, 0s, ease);
+  }
+
+  .about-me {
+    height: 70%;
+    padding-top: 30%;
+    font-family: $serif;
+
+    p {
+      color: $grey1;
+      font-size: 20px;
+
+      &:last-of-type {
+        color: $grey2;
+        font-size: 15px;
+        color: #888;
+      }
+    }
+
+    .social-icons-ul {
+      margin-top: 120px;
+
+      li a {
+        font-size: 30px;
+      }
+
+      .icon-twitter {
+        font-size: 25px;
+      }
+
+      li:not(:last-of-type):after {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .intro {
+    background: $ecrou;
+    padding: $vr*2 0;
+    font-family: $serif;
+
+    p {
+      font-size: 18px;
+    }
+
+    span {
+      color: $grey1;
+      display: block;
+      margin-top: 1.4em;
+    }
+  }
+
+  nav {
+    padding: $vr*2 0;
+
+    li {
+      display: inline-block;
+      width: 32%;
+      text-align: center;
+      font-size: 16px;
+
+      a {
+        text-transform: uppercase;
+        position: relative;
+
+        &:hover:after {
+          content: "\25BC";
+          position: absolute;
+          left: 50%;
+          bottom: -20px;
+          font-size: 11px;
+          animation: slideDown .3s linear;
+        }
+      }
+    }
+  }
+
+  .areas-of-expertise {
+    background: $ecrou;
+    padding: $vr*2 0 $vr;
+
+    h2 span {
+      display: block;
+      text-transform: none;
+      font-weight: normal;
+      margin-top: 20px;
+    }
+
+    ul {
+      margin: $vr 0 $vr/2;
+      list-style-type: disc;
+
+      li {
+        margin-left: 20px;
+        color: $grey1;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .areas-expand {
+
+    h3 {
+      display: inline-block;
+      color: $grey1;
+      font-size: 15px;
+      padding: 0 40px 10px 0;
+      border-bottom: 1px solid #dcdcdc;
+    }
+
+    ul {
+      margin-top: 20px;
+
+      li {
+        margin-bottom: .9em;
+      }
+    }
+
+    section {
+      margin-bottom: $vr*1.5;
+    }
+  }
+
+  .experience {
+    padding: $vr*2 0 $vr;
+
+    ul {
+      list-style-type: disc;
+
+      li {
+        margin-left: 20px;
+        padding-left: 20px;
+        font-size: 18px;
+
+        h3 {
+          font-size: 17px;
+          line-height: 1;
+
+          span {
+            float: right;
+            margin-top: 10px;
+          }
+
+          &:nth-of-type(2) {
+            margin-bottom: $vr;
+            color: $grey5;
+
+            span {
+              margin-top: 0;
+            }
+          }
+
+        }
+
+        p {
+          clear: both;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .job-listing > li {
+      margin-bottom: $vr;
+      
+      &:not(:last-of-type) {
+        padding-bottom: $vr;
+        border-bottom: 1px solid #dcdcdc;
+      }
+    }
+
+    h4 {
+      margin-bottom: 1.2em;
+    }
+  }
+
+  .more-about-me {
+    background: $grey;
+    padding: $vr*2 0;
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .links-bottom {
+    text-align: center;
+    margin: $vr*2 0;
+
+    li {
+      display: inline-block;
+
+      a {
+        display: inline-block;
+        padding: 15px 30px;
+        background: $fuchsia;
+        border-radius: 3px;
+        margin: 0 10px;
+        text-transform: uppercase;
+        font-size: 15px;
+        color: $white;
+
+        &:hover {
+          color: $white;
+          background: darken($fuchsia, 5%);
+        }
+      }
+    }
+
+    .linkedin a {
+      background: $linkedin;
+
+      &:hover {
+        background: darken(#0077B5, 5%);
+      }
+    }
+  }
+}
+
+
+/* Media Queries: Tablet devices overwrite 641px...960px */
+ 
+@media only screen and (max-width:640px) {
+  @import "resume_mobile";
+}

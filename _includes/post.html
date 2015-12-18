@@ -1,0 +1,34 @@
+<div class="title cf">
+  <h4>{{page.title}}</h4>
+</div>
+
+<div class="sidebar">
+  <p class="tags">
+    <span class="icon-calendar">{{ page.date | date_to_string }}</span>
+    {% for tag in page.tags %}
+      <span class="icon-tag">{{tag}}</span>
+    {% endfor %}
+  </p>
+
+  <div class="tweet-this">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="grigoriap" data-size="large" data-count="none">Tweet</a>
+  </div>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div>
+
+<div class="content">
+	{{ content }}
+</div>
+
+<div class="cf">
+  {% if page.previous %}
+  <a href="{{ page.previous.url }}" class="left btn">Previous Post</a>
+  {% endif %}
+  {% if page.next %}
+    <a href="{{ page.next.url }}" class="btn">Next Post</a>
+  {% else %}
+    <a href="/" class="btn">Home</a>
+  {% endif %}
+</div>
+
+{% include disqus.html %}

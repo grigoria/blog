@@ -1,0 +1,41 @@
+// Footer
+
+footer {
+
+  &.wrapper {
+    margin-top: $vr;
+  }
+}
+
+// POSTS
+
+#posts {
+
+	article {
+
+    h4 {
+      margin-bottom: 20px;
+    }
+
+		.sidebar {
+      float: none;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: $vr;
+      position: relative;
+
+      .tweet-this {
+        position: absolute;
+        bottom: 5px;
+        right: 0;
+      }
+    }
+
+    .content {
+
+      > * {
+        margin-left: 0;
+      }
+    }
+	}
+}

@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "Haters gonna hate"
+date:   2014-09-20 12:10:39
+tags: general
+---
+
+<p>When I first attended a conference, I was in a super junior level and I hardly understood what they were talking about when coding was involved. Long story short, it left me a feeling that developers hate each other. To be more precise, people involved in web hate each other. That day, I heard some good talks and some boring ones but all I could hear among the people at the audience was that the speaker sucks, his work sucks, everything sucks. OK, maybe he sucks, maybe his works suck (if you ask me, people that made those comments suck) but I find it unlikely that every speaker was bad and all the greatest minds were in the audience. But I remember feeling ‘sad’ for them, as I was able (even as a complete newbie) to understand that some of the talks were really interesting.</p>
+
+<p>As I'm meeting more and more developers, I figured that this hatred is not a speakers-developers thing. It's everywhere. Of course I'm not saying there isn't any respect among people or that I haven't seen good intentions there. All I'm saying is that, from the things I've seen, a lot of people "bully" others by lowering the value of their work.</p>
+
+<p>I am in a field where there are a lot of young people, it is growing rapidly and very often, especially when design is involved, there is no right or wrong. It's about different techniques and personal judgment. As a former pianist, I know that it is a common phenomenon among people involved in creative professions and I consider development one of them. Most of the people who make such comments often don't have the appropriate knowledge to judge objectively. For me, when you are an expert at what you do, you are humble and you know that the road to success involves a lot of mistakes. For some people, a bad talk or some bad work is one of those mistakes. For others, this is what they will do for the rest of their career: be amateurs. In both cases, people make their choices and live with it.</p>
+
+<p>I consider myself a good person and I used to get frustrated with such hateful comments. But then it popped in my mind: It's easy. Of course it is..you just sit there, looking at the other person exposing himself and his work, recounting his experiences, expressing his beliefs and you are just sitting there, judging him. Of course everyone is being judged, every second of our lives, but judging loudly.. is different, isn't it? You can create something better, you can get inspired or not and move on, but it is time-consuming and you want people to know that you are better <em>now</em>; not when they see your portfolio or when you build the same thing in half time, but now. So here it is: "He sucks, I can do it better with .... ". You try to look superior by devaluing the other person's work and during that time, you try to be as good as him or make this fact obvious.</p>
+
+<p>Don't get me wrong, it's not that I haven't heard bad talks, or that I haven't ever judged others. When someone presents a talk, I expect him to give his best. All I'm saying is that I respect him because maybe this is his way to get better, and I also value what he does because I can't do it (Don't start thinking "everyone can do it, it just needs practice". I just can't). Or even if I can do it, he does it too and I think it's great.</p>
+
+<p>There is a phrase by Tom Hiddleston that I have used again in the past but summarises the way I think:
+  <blockquote>Stay hungry, stay young, stay foolish, stay curious, and above all stay humble, because just when you think you’ve got all the answers is the moment when some bitter twist of fate in the universe will remind you that you very much don’t.</blockquote>
+</p>
+
+<p>So...this is my first post. It's not a "don't hate me post", it's a "I'd love you to hate me" post. Cause when this happens, it means I have taken a step further, my word will have inspired some people, as I got inspired by other people. This blog will mainly serve as a "note to myself". I have nothing new to say, I have nothing to say that you can't google and I'm not a css pro to write a stunning css technique. In fact, I'm a superhero css developer but still humble enough not to brag about it. I will write now and then because I have things in my mind that I want to see written. I will tweet them too, because I desperately need followers.</p>

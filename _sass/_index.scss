@@ -1,0 +1,24 @@
+#main {
+  background: $white;
+
+  .articles-list {
+    margin-top: $vr*2;
+
+    p {
+      margin-bottom: $vr/2;
+    }
+  }
+}
+
+
+/* Media Queries: Tablet devices overwrite 641px...960px */
+ 
+@media only screen and (max-width:960px) {
+  @import "index_tablet";
+}
+
+/* Media Queries: Tablet devices overwrite 641px...960px */
+ 
+@media only screen and (max-width:640px) {
+  @import "index_mobile";
+}

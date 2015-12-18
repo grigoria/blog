@@ -1,0 +1,95 @@
+#resume {
+
+li {
+	line-height: 1.6;
+}
+
+  > .wrapper {
+  	height: auto;
+  	margin-bottom: 60px;
+  }
+	
+	.about-me {
+		height: auto;
+		padding-top: 20px;
+
+		p {
+			font-size: 16px;
+		}
+
+		.social-icons-ul {
+			margin-top: 0;
+
+			li a {
+				font-size: 20px;
+			}
+
+			.icon-twitter {
+				font-size: 18px;
+			}
+		}
+	}
+
+	.intro {
+		padding: 40px 0;
+
+		p {
+			font-size: 15px;
+		}
+	}
+
+	nav {
+		padding: 40px 0;
+
+		li {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	.areas-of-expertise {
+		padding-top: 40px;
+
+		 ul li {
+		 	font-size: 15px;
+		 }
+	}
+
+	.experience {
+		padding-top: 40px;
+
+		ul li {
+			font-size: 15px;
+			padding-left: 0;
+
+			h3 {
+				font-size: 14px;
+
+				span {
+					margin-top: 5px;
+				}
+			}
+
+			p {
+
+				font-size: 15px;
+			}
+		}
+
+		.job-listing > li {
+			margin-bottom: 30px;
+
+			&:not(:last-of-type) {
+				padding-bottom: 20px;
+			}
+		}
+	}
+
+	.more-about-me {
+		padding: 40px 0;
+
+		p {
+			font-size: 15px;
+		}
+	}
+}

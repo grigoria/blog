@@ -1,0 +1,45 @@
+header {
+  
+  nav {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+a.btn {
+  font-size: 13px;
+  padding: 12px 20px;
+}
+
+// Footer
+
+footer.wrapper {
+  margin-top: $vr/2;
+}
+
+// POSTS
+
+#posts {
+
+  article {
+
+  .sidebar .tweet-this {
+    bottom: -5px;
+  }
+
+    h4 {
+      font-size: 19px;
+      margin-top: $vr/2;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
+}
+
+.char {
+  font-size: 15px;
+}
