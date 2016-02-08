@@ -8,9 +8,9 @@ layout: resume
 
     <div class="about-me">
       <p>I'm a UI engineer living in Athens.</p>
+      <p>Currently, I work for <a href="http://wprkable.com" target="_blank">Workable</a>, a simple but powerful hiring tool, used by more than 3,200 businesses in 52 countries</p>
       <p>For the past few years, I was designing and implementing user interfaces at <a href="http://skroutz.gr" target="_blank">Skroutz.gr</a>, the leading price comparison engine in Greece.</p>
       <p><a href="https://twitter.com/grigoriap" target="_blank">Follow me on twitter</a> or <a href="mailto: grigoria.pontiki@gmail.com" target="_blank">drop me a line</a>.</p>
-      <p>P.S. I am currently not available for hire.</p>
       <ul class="social-icons-ul">
         <li>
           <a href="mailto: grigoria.pontiki@gmail.com" target="_blank" class="icon-email"></a>
@@ -100,36 +100,52 @@ layout: resume
     <div class="wrapper">
       <h2>Working Experience</h2>
       <ul class="job-listing">
-<!--         <li>
+        <li class="workable">
           <h3>UI Engineer
             <span>November 2015 - present</span>
           </h3>
-          <h3>Workable.com
-            <span>1 month</span>
-          </h3>
-          <p>Based in Boston, with offices in London and Athens, it is used by SMBs in more than 50 countries. Founded in 2012, <a href="http://workable.com" target="_blank">Workable</a> has raised a total of $34m of venture financing from Balderton Capital, Notion Capital, 83North (formerly Greylock IL), Openfund and angel investors.</p>
-        </li> -->
+          <h3>Workable.com</h3>
+          <p class="description">Based in Boston, with offices in London and Athens, it is used by SMBs in more than 50 countries. Founded in 2012, <a href="http://workable.com" target="_blank">Workable</a> has raised a total of $34m of venture financing from Balderton Capital, Notion Capital, 83North (formerly Greylock IL), Openfund and angel investors.</p>
+          <div class="text-right">
+            <a href="#" id="workable-more" class="more">+ my role in Workable</a>
+          </div>
 
-        <li>
+          <div id="workable-expand" class="experience-expand hidden">
+
+            <p>At Workable.com, as a member of the 'Core Product' team, I am responsible for:</p>
+            <ul>
+              <li>the front end development of <a href="https://www.workable.com" target="_blank">workable.com</a> core product</li>
+              <li>writing semantic markup (HAML) and Sass</li>
+              <li>conducting usability studies</li>
+              <li>creating fast prototypes</li>
+            </ul>
+          </div>
+
+        </li>
+
+        <li class="skroutz">
           <h3>Front-end Developer / UX Designer
             <span>November 2012 - November 2015</span>
           </h3>
           <h3>Skroutz S.A.
             <span>3 years</span>
           </h3>
-          <p>Skroutz S.A. is the company behind <a href="https://www.skroutz.gr" target="_blank">skroutz.gr</a>, the leading price comparison engine in Greece. Skroutz.gr includes million of products from different online stores and serves more than 3.5 million unique users on a monthly basis.</p>
+          <p class="description">Skroutz S.A. is the company behind <a href="https://www.skroutz.gr" target="_blank">skroutz.gr</a>, the leading price comparison engine in Greece. Skroutz.gr includes million of products from different online stores and serves more than 3.5 million unique users on a monthly basis.</p>
 
-          <p>At Skroutz S.A., as a member of the UX team, I was responsible for:</p>
-          <ul>
-            <li>the front end development of <a href="https://www.skroutz.gr" target="_blank">skroutz.gr</a>, <a href="https://www.alve.com" target="_blank">alve.com</a> and <a href="https://www.scrooge.co.uk" target="_blank">scrooge.co.uk</a></li>
-            <li>writing semantic HTML and CSS/Sass</li>
-            <li>usability research and tests</li>
-            <li>tackling UX problems</li>
-          </ul>
+          <div class="text-right">
+            <a href="#" id="skroutz-more" class="more">+ my role in Skroutz S.A.</a>
+          </div>
 
-          <a href="#" id="experience-more" class="more">+ more</a>
+          <div id="skroutz-expand" class="experience-expand hidden">
 
-          <div id="experience-expand" class="experience-expand hidden">
+            <p>At Skroutz S.A., as a member of the UX team, I was responsible for:</p>
+            <ul>
+              <li>the front end development of <a href="https://www.skroutz.gr" target="_blank">skroutz.gr</a>, <a href="https://www.alve.com" target="_blank">alve.com</a> and <a href="https://www.scrooge.co.uk" target="_blank">scrooge.co.uk</a></li>
+              <li>writing semantic HTML and CSS/Sass</li>
+              <li>usability research and tests</li>
+              <li>tackling UX problems</li>
+            </ul>
+
             <h4>Selected Accomplishments:</h4>
             <ul>
               <li>Front-end implementation and maintenance of “Skroutz for merchants”, the administration panel for merchants</li>
@@ -148,7 +164,7 @@ layout: resume
           <h3>May 2012 - November 2012
             <span>about 6 months</span>
           </h3>
-          <p>I started as a freelnacer web designer but later on, I started feeling that I want to code them myself, so Istarted writing HTML, CSS and jQuery when needed.</p>
+          <p>I started as a freelancer web designer but later on, I started feeling that I want to code them myself, so Istarted writing HTML, CSS and jQuery when needed.</p>
           <h4>What I was doing back then was:</h4>
           <ul>
             <li>Design custom user interfaces based on client’s needs</li>
@@ -192,9 +208,15 @@ $( "#areas-more" ).click(function ( e ) {
   $( "#areas-expand" ).slideDown( 500 );
 });
 
-$( "#experience-more" ).click(function ( e ) {
+$( "#workable-more" ).click(function ( e ) {
   e.preventDefault()
   $( this ).css("visibility", "hidden");
-  $( "#experience-expand" ).slideDown( 500 );
+  $( "#workable-expand" ).slideDown( 500 );
+});
+
+$( "#skroutz-more" ).click(function ( e ) {
+  e.preventDefault()
+  $( this ).css("visibility", "hidden");
+  $( "#skroutz-expand" ).slideDown( 500 );
 });
 </script>
