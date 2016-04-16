@@ -3,12 +3,15 @@
 </div>
 
 <div class="sidebar">
-  <p class="tags">
-    <span class="icon-calendar">{{ page.date | date_to_string }}</span>
-    {% for tag in page.tags %}
-      <span class="icon-tag">{{tag}}</span>
-    {% endfor %}
-  </p>
+  <ul class="tags">
+    <li class="icon-calendar">{{ page.date | date_to_string }}</li>
+    <li class="icon-tag">
+      {% for tag in page.tags %}
+        <span>{{tag}}</span>
+      {% endfor %}
+    </li>
+      <li class="icon-book">{% include read_time.html %}</li>
+  </ul>
 
   <div class="tweet-this">
     <a href="https://twitter.com/share" class="twitter-share-button" data-via="grigoriap" data-size="large" data-count="none">Tweet</a>
