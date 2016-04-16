@@ -151,18 +151,23 @@
     ul {
       list-style-type: disc;
 
+      &:not(:last-of-type) {
+        margin-bottom: 40px;
+      }
+
       li {
         margin-left: 20px;
         padding-left: 20px;
         font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 15px;
 
         h3 {
           font-size: 17px;
-          line-height: 1;
+          line-height: 1.7;
 
           span {
             float: right;
-            margin-top: 10px;
           }
 
           &:nth-of-type(2) {
