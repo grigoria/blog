@@ -3,8 +3,8 @@ title: Grigoria Pontiki
 fullname: Grigoria Pontiki
 email: grigoria.pontiki@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Frontend engineer living in Athens. Currently I design and implement 
-  user interfaces at Skroutz.gr, the leading price comparison engine in Greece.
+  UI engineer living in Athens. Currently, I work for Workable, a simple 
+  but powerful hiring tool, used by more than 3,200 businesses in 52 countries.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://grigoria.gr" # the base hostname & protocol for your site
 twitter_username: jekyllrb
