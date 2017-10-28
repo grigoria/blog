@@ -1,0 +1,49 @@
+footer {
+  padding: 20px 0 80px;
+
+  &.wrapper {
+    margin-top: 80px;
+  }
+}
+
+.social-icons-ul {
+  text-align: center;
+
+  li {
+    display: inline-block;
+
+    &:not(:last-of-type)::after {
+      content: '\2022';
+      color: $grey4;
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+
+    a {
+      display: inline-block;
+      font-size: 22px;
+      text-decoration: none;
+
+      &::before {
+        color: #bbb;
+      }
+
+      &:hover::before {
+        color: $yellow;
+      }
+    }
+  }
+
+  .icon-twitter {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  @import 'footer_tablet';
+}
+
+@media only screen and (max-width: 640px) {
+  @import 'footer_mobile';
+}
+

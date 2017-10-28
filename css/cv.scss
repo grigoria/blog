@@ -1,8 +1,11 @@
 ---
 ---
 
-@import "fonts";
-@import "custom";
+// BASE
+@import 'base/variables';
+@import 'base/helpers';
+@import 'base/grid';
+@import 'base/fonts';
+@import 'base/typography';
 
-// cv
-@import "cv";
+@import "sections/cv";

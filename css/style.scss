@@ -1,12 +1,24 @@
 ---
 ---
 
-@import "fonts";
-@import "custom";
-@import "general";
+// BASE
+@import 'base/variables';
+@import 'base/helpers';
+@import 'base/grid';
+@import 'base/fonts';
+@import 'base/typography';
+@import 'base/tags';
+@import 'base/buttons';
 
-// Index page
-@import "index";
+// MODULES
+@import 'modules/header';
+@import 'modules/footer';
+@import 'modules/article';
+@import 'modules/highlight';
 
-// Resume
-@import "resume";
+// SECTIONS
+@import 'sections/index';
+@import 'sections/post';
+@import 'sections/resume';
+@import 'sections/index';
+@import 'sections/resume';

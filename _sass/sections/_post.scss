@@ -1,0 +1,96 @@
+/*
+  Page about each blogpost
+*/
+
+.posts {
+
+  .tags > li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  article {
+
+    h4 {
+      margin-top: 20px;
+      font-size: 24px;
+      margin-bottom: 60px;
+      line-height: 1.4;
+    }
+
+    h5 {
+      font-size: 24px;
+      font-family: $text-font;
+      color: $primary-gray;
+      padding-bottom: 20px;
+      margin: 40px 0 20px;
+      border-bottom: 1px solid $grey4;
+    }
+
+    p {
+      font-size: 19px;
+      margin-bottom: 30px;
+    }
+
+    .sidebar {
+      float: left;
+      width: 200px;
+      margin-right: -100%;
+    }
+
+    .content {
+      width: 100%;
+      margin-bottom: 60px;
+
+      > * {
+        margin-left: 200px;
+      }
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .previous-article {
+    float: left;
+    padding-left: 20px;
+    text-align: left;
+
+    &::after {
+      content: '\2039';
+      left: 0;
+    }
+  }
+
+  .next-article {
+    float: right;
+    padding-right: 20px;
+    text-align: right;
+
+    &::after {
+      content: '\203A';
+      right: 0;
+    }
+  }
+}
+
+#disqus_thread {
+  margin-top: 20px;
+}
+
+.jsfiddle {
+  margin: 40px 0;
+}
+
+.embed-tweet {
+  margin-bottom: 40px;
+}
+
+@media only screen and (max-width: 960px) {
+  @import 'post_tablet';
+}
+
+@media only screen and (max-width: 640px) {
+  @import 'post_mobile';
+}

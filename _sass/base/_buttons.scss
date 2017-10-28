@@ -1,0 +1,19 @@
+.btn,
+.btn:visited {
+  background: $primary-link;
+  border-bottom: 2px solid darken($primary-link, 10%);
+  color: $white;
+  font-family: $text-font;
+  font-size: 15px;
+  padding: 12px 30px;
+  text-decoration: none;
+
+  &:hover {
+    background: $yellow;
+    border-bottom: 2px solid darken($yellow, 15%);
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  @import 'buttons_mobile';
+}

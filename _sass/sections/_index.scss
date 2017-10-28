@@ -2,23 +2,16 @@
   background: $white;
 
   .articles-list {
-    margin-top: $vr*2;
+    margin-top: 80px;
 
     p {
-      margin-bottom: $vr/2;
+      margin-bottom: 10px;
     }
   }
 
   .tags > span {
     display: inline;
   }
-}
-
-
-/* Media Queries: Tablet devices overwrite 641px...960px */
- 
-@media only screen and (max-width:960px) {
-  @import "index_tablet";
 }
 
 /* Media Queries: Tablet devices overwrite 641px...960px */

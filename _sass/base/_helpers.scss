@@ -1,0 +1,28 @@
+.cf {
+
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.text-right {
+  text-align: right;
+}

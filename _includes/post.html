@@ -25,12 +25,12 @@
 
 <div class="cf">
   {% if page.previous %}
-  <a href="{{ page.previous.url }}" class="left btn">Previous Post</a>
+  <a href="{{ page.previous.url }}" class="btn left">Previous Post</a>
   {% endif %}
   {% if page.next %}
-    <a href="{{ page.next.url }}" class="btn">Next Post</a>
+    <a href="{{ page.next.url }}" class="btn right">Next Post</a>
   {% else %}
-    <a href="/" class="btn">Home</a>
+    <a href="/" class="btn right">Home</a>
   {% endif %}
 </div>
 

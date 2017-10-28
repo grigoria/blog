@@ -1,0 +1,34 @@
+.tags {
+  font-family: $text-font;
+  margin-bottom: 20px;
+
+  .icon-tag,
+  .icon-calendar,
+  .icon-book {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    color: $color-gray34;
+    margin-right: 25px;
+    padding-left: 25px;
+    vertical-align: top;
+
+    &::before {
+      position: absolute;
+      top: 4px;
+      left: 0;
+    }
+  }
+
+  .icon-tag span {
+
+    &::after {
+      content: ',';
+    }
+
+    &:last-child::after {
+      content: '';
+    }
+  }
+}
+

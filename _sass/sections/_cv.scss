@@ -1,4 +1,3 @@
-$vr: 40px;
 $kepler: "kepler-std", serif;
 $nimbus: "nimbus-sans",sans-serif;
 
@@ -11,32 +10,32 @@ $nimbus: "nimbus-sans",sans-serif;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    padding-bottom: $vr;
+    padding-bottom: 40px;
   }
 
   .about-me {
     font-family: $kepler;
-    color: $grey2;
+    color: $primary-gray;
     font-size: 22px;
     font-weight: 300;
-    margin: $vr 0;
+    margin: 40px 0;
 
     &:nth-of-type(2) {
-      margin-bottom: $vr*2;
+      margin-bottom: 20px;
     }
   }
 }
 
 header {
-  padding: $vr*1.5 0;
+  padding: 60px 0;
 
   h1 {
     font-family: $kepler;
     font-weight: 300;
     font-size: 50px;
-    color: $grey6;
+    color: $color-gray34;
     padding-bottom: 25px;
-    margin-bottom: $vr/4;
+    margin-bottom: 10px;
     border-bottom: 1px solid $grey4;
     text-align: center;
   }
@@ -50,38 +49,38 @@ header {
       font-size: 14px;
       padding-left: 20px;
       position: relative;
-      margin-right: $vr;
-      color: $grey6;
+      margin-right: 40px;
+      color: $color-gray34;
 
-      &:before {
-        color: $fuchsia;
+      &::before {
+        color: $primary-color;
         position: absolute;
-        top: 0;
+        top: 2px;
         left: 0;
       }
 
       &:nth-child(2) {
         padding-left: 25px;
 
-        &:before {
-          top: 1px;
+        &::before {
+          top: 4px;
         }
       }
 
       &:nth-child(3) {
         padding-left: 22px;
 
-        &:before {
+        &::before {
           font-size: 11px;
-          top: 3px;
+          top: 6px;
         }
       }
 
       &:nth-child(4) {
         padding-left: 23px;
 
-        &:before {
-          top: 1px;
+        &::before {
+          top: 4px;
         }
       }
 
@@ -91,10 +90,10 @@ header {
 
       a,
       a:visited {
-        color: $grey6;
+        color: $color-gray34;
 
         &:hover {
-          color: $fuchsia;
+          color: $primary-color;
         }
       }
     }
@@ -102,18 +101,18 @@ header {
 }
 
 section {
-  margin: $vr 0;
+  margin: 40px 0;
   font-size: 17px;
   line-height: 1.5;
   font-family: $nimbus;
   font-weight: 300;
 
   h2 {
-    color: $fuchsia;
+    color: $primary-color;
     font-size: 17px;
     padding-bottom: 5px;
-    margin-bottom: $vr/2;
-    border-bottom: 1px solid $fuchsia;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $primary-color;
     text-transform: uppercase;
   }
 
@@ -126,9 +125,9 @@ section {
       margin-bottom: 10px;
 
       a {
-        color: $grey2 !important;
-        border-bottom: 1px dotted $grey2;
-        @include transition(all, .3s, ease);
+        color: $primary-gray !important;
+        border-bottom: 1px dotted $primary-gray;
+        transition: all 0.3s ease;
 
         &:hover {
           border-bottom-style: solid;
@@ -137,21 +136,21 @@ section {
     }
 
     ul {
-      padding-left: $vr;
+      padding-left: 40px;
       list-style-type: circle;
     }
   }
 
   dt {
     font-weight: 400;
-    margin-bottom: $vr/4;
+    margin-bottom: 10px;
     padding-bottom: 5px;
   }
 
   dd {
-    margin-bottom: $vr/2;
-    padding-bottom: $vr/2;
-    border-bottom: 1px dotted $grey6;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted $color-gray34;
 
     &:last-of-type {
       border-bottom: none;
@@ -166,7 +165,7 @@ section {
 .linkedin {
   display: block;
   text-align: center;
-  margin: $vr*1.5 0 $vr;
+  margin: 60px 0 40px;
 }
 
 

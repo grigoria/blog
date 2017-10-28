@@ -1,27 +1,16 @@
-// Footer
+.posts {
 
-footer {
-
-  &.wrapper {
-    margin-top: $vr;
-  }
-}
-
-// POSTS
-
-#posts {
-
-	article {
+  article {
 
     h4 {
       margin-bottom: 20px;
     }
 
-		.sidebar {
+    .sidebar {
       float: none;
       width: 100%;
       margin-right: 0;
-      margin-bottom: $vr;
+      margin-bottom: 40px;
       position: relative;
 
       .tweet-this {
@@ -37,5 +26,5 @@ footer {
         margin-left: 0;
       }
     }
-	}
+  }
 }

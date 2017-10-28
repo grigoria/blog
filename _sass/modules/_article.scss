@@ -1,0 +1,50 @@
+article {
+  margin-bottom: 80px;
+
+  h4 {
+    font-family: $text-font;
+    color: $primary-gray;
+    font-size: 24px;
+
+    a,
+    a:visited {
+      color: $primary-link;
+    }
+  }
+
+  p,
+  ul:not(.tags) li,
+  ol li {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  ul:not(.tags),
+  ol {
+    list-style-position: outside;
+
+    li {
+      margin: 0 0 10px 20px;
+
+      ul,
+      ol {
+        margin: 10px 0 10px 40px;
+        list-style-type: circle;
+      }
+
+      span {
+        display: block;
+        color: $color-gray34;
+        font-size: 16px;
+      }
+    }
+  }
+
+  ul:not(.tags) {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+}
