@@ -3,7 +3,7 @@ ul li,
 ol li {
   color: $color-text;
   font-family: $text-font;
-  font-size: 16px;
+  font-size: 1.2rem;
   line-height: 1.5;
   margin-bottom: 1.4em;
   -webkit-font-smoothing: antialiased;
@@ -15,7 +15,8 @@ a:visited {
 }
 
 a:hover {
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
+  text-decoration: none;
 }
 
 ::selection {
@@ -24,7 +25,7 @@ a:hover {
 
 ::-moz-selection {
   background: $yellow;
-  color: $white;
+  color: $color-white;
 }
 
 ol {

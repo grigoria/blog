@@ -59,7 +59,7 @@
   }
 
   .intro {
-    background: $white;
+    background: $color-white;
     padding: 80px 0;
     font-family: $text-font;
 
@@ -100,7 +100,7 @@
   }
 
   .areas-of-expertise {
-    background: $white;
+    background: $color-white;
     padding: 80px 0 40px;
 
     h2 span {
@@ -238,7 +238,7 @@
   }
 
   .more-about-me {
-    background: $white;
+    background: $color-white;
     padding: 80px 0;
 
     p {
@@ -261,10 +261,10 @@
         margin: 0 10px;
         text-transform: uppercase;
         font-size: 15px;
-        color: $white;
+        color: $color-white;
 
         &:hover {
-          color: $white;
+          color: $color-white;
           background: darken($primary-color, 5%);
         }
       }

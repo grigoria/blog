@@ -1,7 +1,8 @@
 body,
 html {
-  background: $white;
+  background: $color-white;
   height: 100%;
+  font-size: 100%;
 }
 
 .wrapper {
@@ -9,4 +10,8 @@ html {
   max-width: 780px;
   overflow: hidden;
   width: 96%;
+}
+
+@media only screen and (max-width: 640px) {
+  @import 'grid_mobile';
 }
