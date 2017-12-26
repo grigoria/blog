@@ -12,18 +12,15 @@
   article {
 
     h4 {
-      margin-top: 20px;
-      font-size: 24px;
-      margin-bottom: 60px;
+      margin: 60px 0 30px;
       line-height: 1.4;
     }
 
     h5 {
-      font-size: 24px;
-      font-family: $text-font;
+      font-size: 1.5rem;
       color: $primary-gray;
-      padding-bottom: 20px;
-      margin: 40px 0 20px;
+      padding-bottom: 10px;
+      margin: 40px 0 30px;
       border-bottom: 1px solid $grey4;
     }
 
@@ -35,6 +32,10 @@
       float: left;
       width: 200px;
       margin-right: -100%;
+
+      .tweet-this {
+        margin-top: 20px;
+      }
     }
 
     .content {
@@ -75,7 +76,7 @@
 }
 
 #disqus_thread {
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
 .jsfiddle {

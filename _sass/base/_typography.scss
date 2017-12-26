@@ -1,12 +1,15 @@
+body {
+  font-family: $text-font;
+  -webkit-font-smoothing: antialiased;
+}
+
 p,
 ul li,
 ol li {
   color: $color-text;
-  font-family: $text-font;
   font-size: 1.2rem;
   line-height: 1.5;
   margin-bottom: 1.4em;
-  -webkit-font-smoothing: antialiased;
 }
 
 a,
@@ -20,12 +23,11 @@ a:hover {
 }
 
 ::selection {
-  background: $yellow;
+  background: #fde8e8;
 }
 
 ::-moz-selection {
-  background: $yellow;
-  color: $color-white;
+  background: #fde8e8;
 }
 
 ol {
@@ -38,16 +40,10 @@ em {
 
 .plus-link,
 .plus-link:visited {
-  color: $secondary-link;
-  font-family: $text-font;
-  position: relative;
-  padding-left: 15px;
   font-size: 14px;
+  text-decoration: none;
 
-  &:before {
-    content: '+';
-    left: 0;
-    position: absolute;
-    top: 1px;
+  &:hover {
+    text-decoration: underline;
   }
 }

@@ -1,16 +1,23 @@
-#main {
+.main {
   background: $color-white;
 
   .articles-list {
-    margin-top: 80px;
+
+    article h4 {
+      font-size: 1.4rem;
+    }
 
     p {
       margin-bottom: 10px;
     }
   }
 
-  .tags > span {
-    display: inline;
+  .tags {
+    margin-top: 10px;
+
+    > span {
+      display: inline;
+    }
   }
 }
 

@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div id="main">
+<div class="main">
   <div class="wrapper">
     <ul class="articles-list">
       {% for post in site.posts limit 20 %}
@@ -28,7 +28,7 @@ layout: default
               </li>
             </ul>
             {{ post.content | truncatewords:60}}</p>
-            <a href="{{ post.url }}" class="plus-link right">read more</a>
+            <a href="{{ post.url }}" class="plus-link right">read more...</a>
           </article>
         </li>
       {% endfor %}
