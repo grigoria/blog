@@ -11,7 +11,7 @@ You may want to improve your website's usability or add new features to increase
 
 One of the most important things that I have learned while working on large-scale websites is that performance starts from UI. Designers should care about website performance, engineers should care about usability. It is an ongoing process that results in improving user experience. Performance is a general subject with many branches, so I won't cover everything. These are just some simple things I consider as best practices:
 
-##### HTML
+### HTML
 Keep your HTML as short as it needs to be. Use **no more elements than you need** and **avoid using id/class** if you don't need them. That said, avoid **many inline SVG** as they increase HTML bloat and **don't use comments** in HTML. If it's possible, add them using backend template language, so that they are not added to the DOM.
 
 For example, in a Rails project, I would use this to prevent comments from appearing in the DOM:
@@ -37,7 +37,7 @@ The code is still well documented.
 
 There will be times where you will have to increase the HTML size rather than do an extra request. Do the math or follow your heart.
 
-##### CSS
+### CSS
 Make your code **as [DRY](http://www.slideshare.net/jeremyclarke/dry-css-a-dontrepeatyourself-methodology-for-creating-efficient-unified-and-scalable-stylesheets) as possible**. You can do this by using a CSS preprocessor or by using methodologies like OOCSS, SMACSS or BEM. (Using a preprocessor won’t really help you increase website’s performance, but it will help you in writing “DRY" code.) Whatever you do, make sure that you don't repeat yourself.
 
 Be sure to delete styles that you no longer use and be sure that you **load just the styles that you are going to use**. Following a **mobile-first** approach in development (if done right) will help you do this. Begin building things for mobile and continue adding styles for larger viewports, rather than loading everything in the mobile and just display: none them. Styles will still be loaded and in [some cases](https://timkadlec.com/2012/04/media-query-asset-downloading-results/), assets will be downloaded even if you hide them with display: none.
@@ -50,7 +50,7 @@ the browser has to look out for four things, the `.nav` class, then the `.header
 
 Finally, **don't use CSS rules that increase paint time**. For example, avoid using the old `text-indent: -99999999px` and use Zeldman's [image replacement](http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/) technique. Furthermore, by using certain CSS rules,  you can trick the browser into triggering GPU acceleration. So, it's a good technique to apply transform: translateZ in elements that are in a fixed position or to animate elements ([Read more](http://blog.teamtreehouse.com/increase-your-sites-performance-with-hardware-accelerated-css) about Hardware-accelerated CSS). CSS properties like box-shadow [affect](http://www.html5rocks.com/en/tutorials/speed/css-paint-times/) your page paint time, too.
 
-##### Images
+### Images
 The maximum parallel HTTP connections per server are in average 6 (the number differs for every browser).
 Once again: Use as fewer images as possible because they cost. They cost connections and in the case of mobile users, images cost them data usage which they pay for.
 
@@ -72,7 +72,7 @@ The tools I use to optimize images:
 * [ImageAlpha](https://pngmini.com/) for **PNG** format
 * [SVGO-GUI](https://github.com/svg/svgo-gui) tool minifies **SVG** files up to 50-60%
 
-##### Fonts
+### Fonts
 Same for images, use as fewer fonts as possible and as fewer character sets as possible. If you plan to use bold for just one element, avoid to load the whole font-weight. I support the ["Don't fake styles"](https://twitter.com/grigoriap/status/424842509228179456) rule, but if I have to choose performance or design, I vote for performance. Avoid loading a whole font to render just a few icons. In the case of fewer than 10-15 icons I use a sprite or inline SVG instead of icon fonts, to avoid the cost of the extra request.
 
 Currently, we can use fonts that we self-host or import them into websites by using an external service like Google fonts, Typekit etc. Also, we can import a font by adding a script in the HTML.
@@ -86,7 +86,7 @@ For example:
 or using the CSS way:
 
 ```
-    <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/6665ec77-7ab3-4d6d-859f-b85c03408141.css”/> 
+    <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/6665ec77-7ab3-4d6d-859f-b85c03408141.css”/>
 ```
 
 or

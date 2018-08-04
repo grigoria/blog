@@ -5,11 +5,11 @@ date:   2014-10-14 10:37:39
 tags: css
 ---
 
-<p>Selectors offer a lot of flexibility and (if used correctly) may reduce many lines of code, such as overrides. 
+<p>Selectors offer a lot of flexibility and (if used correctly) may reduce many lines of code, such as overrides.
 <br />
 The following are not my favorite selectors; I'm not so nerd to have favorite selectors. They are some that, even if I don't use them very often, I find useful and sometimes can save you from the trouble of inventing proper class names.</p>
 
-##### X:not()
+#### X:not()
 
 Use `:not` when you want to select all elements except one. So, instead of applying general rules and then overriding them, like:
 
@@ -34,7 +34,7 @@ X:not(:last-child) {
 }
 {% endhighlight %}
 
-##### X + *
+#### X + *
 
 I usually use this one to clear floats but I find it very versatile. What it basically does is select whatever is right after the given element.
 
@@ -50,7 +50,7 @@ X + * {
 }
 {% endhighlight %}
 
-##### X:nth-child(odd/even)
+#### X:nth-child(odd/even)
 
 
 `nth-child(N)` accepts an integer (N) as a parameter and targets the nth list item.
@@ -72,7 +72,7 @@ li:nth-child(even) {
 }
 {% endhighlight %}
 
-##### X:nth-last-child(Ν)
+#### X:nth-last-child(Ν)
 
 This one selects the nth to last element.
 
@@ -84,7 +84,7 @@ li:nth-last-child(2) {
 }
 {% endhighlight %}
 
-#####  Mixin for not applying hover effect on touch screen devices
+####  Mixin for not applying hover effect on touch screen devices
 
 This is a mixin I created with my fellow and sass fanboy, <a href="http://vangeltzo.com/" target="_blank">vangeltzo</a>, when we didn't want hover states in mobile views so as to avoid useless browser painting. This mixin applies hover state to the elements for viewports larger than 960px. In IE8, which doesn't support media queries, the elements will have hover state in all viewports. Eventually we didn't use it because it increases code complexity in large projects.
 
@@ -106,6 +106,6 @@ There is <a href="http://stackoverflow.com/questions/2741816/is-it-possible-to-f
     &:hover {
       @content;
     }
-  } 
+  }
 }
 {% endhighlight %}
