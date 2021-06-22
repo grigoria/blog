@@ -1,0 +1,93 @@
+I"<p>Selectors offer a lot of flexibility and (if used correctly) may reduce many lines of code, such as overrides.
+<br />
+The following are not my favorite selectors; I'm not so nerd to have favorite selectors. They are some that, even if I don't use them very often, I find useful and sometimes can save you from the trouble of inventing proper class names.</p>
+
+<h4 id="xnot">X:not()</h4>
+
+<p>Use <code class="language-plaintext highlighter-rouge">:not</code> when you want to select all elements except one. So, instead of applying general rules and then overriding them, like:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">X</span> <span class="p">{</span>
+  <span class="nl">padding-bottom</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+  <span class="nl">border-bottom</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">X</span><span class="nd">:last-child</span> <span class="p">{</span>
+  <span class="nl">padding-bottom</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">border-bottom</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>you can use <code class="language-plaintext highlighter-rouge">:not</code>:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">X</span><span class="nd">:not</span><span class="o">(</span><span class="nd">:last-child</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nl">padding-bottom</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+  <span class="nl">border-bottom</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<h4 id="x--">X + *</h4>
+
+<p>I usually use this one to clear floats but I find it very versatile. What it basically does is select whatever is right after the given element.</p>
+
+<p>For example:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">X</span> <span class="p">{</span>
+  <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">X</span> <span class="o">+</span> <span class="o">*</span> <span class="p">{</span>
+  <span class="nl">clear</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<h4 id="xnth-childoddeven">X:nth-child(odd/even)</h4>
+
+<p><code class="language-plaintext highlighter-rouge">nth-child(N)</code> accepts an integer (N) as a parameter and targets the nth list item.</p>
+
+<p>Instead of an integer, nth-child also accepts two keywords: even and odd. “Even” selects even elements, like the 2nd, 4th, 6th, etc. “Odd” selects odd elements, like 1st, 3rd, 5th, etc.</p>
+
+<p>It can be especially useful in a, let’s say, 2-column layout where you want to select only the elements of the second column.</p>
+
+<p>For example:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">li</span> <span class="p">{</span>
+  <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
+  <span class="nl">margin-right</span><span class="p">:</span> <span class="m">40px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">li</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">even</span><span class="o">)</span> <span class="p">{</span>
+  <span class="err">margin-right</span> <span class="err">0;</span>
+<span class="p">}</span></code></pre></figure>
+
+<h4 id="xnth-last-childν">X:nth-last-child(Ν)</h4>
+
+<p>This one selects the nth to last element.</p>
+
+<p>For example, the following lines apply green color to the second to last li:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">li</span><span class="nd">:nth-last-child</span><span class="o">(</span><span class="err">2</span><span class="o">)</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<h4 id="mixin-for-not-applying-hover-effect-on-touch-screen-devices">Mixin for not applying hover effect on touch screen devices</h4>
+
+<p>This is a mixin I created with my fellow and sass fanboy, <a href="http://vangeltzo.com/" target="_blank">vangeltzo</a>, when we didn’t want hover states in mobile views so as to avoid useless browser painting. This mixin applies hover state to the elements for viewports larger than 960px. In IE8, which doesn’t support media queries, the elements will have hover state in all viewports. Eventually we didn’t use it because it increases code complexity in large projects.</p>
+
+<p>Another reason for not using this mixin is that <a href="http://msdn.microsoft.com/en-us/library/ie/dn265029(v=vs.85).aspx" target="_blank">IE11 supports hover touch</a>, while IE7 doesn’t have a hover state at all.</p>
+
+<p>There is <a href="http://stackoverflow.com/questions/2741816/is-it-possible-to-force-ignore-the-hover-pseudoclass-for-iphone-ipad-users" target="_blank">another suggestion</a> for removing hover states from touch devices, that I also find very messy.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@mixin</span> <span class="n">hover</span> <span class="p">{</span>
+
+  <span class="k">@media</span> <span class="n">only</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-device-width</span><span class="p">:</span> <span class="m">960px</span><span class="p">)</span> <span class="p">{</span>
+    <span class="o">&amp;</span><span class="nd">:hover</span> <span class="p">{</span>
+      <span class="err">@content;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">@at-root</span> <span class="p">.</span><span class="n">ie8</span> <span class="err">&amp;</span> <span class="p">{</span>
+
+    <span class="o">&amp;</span><span class="nd">:hover</span> <span class="p">{</span>
+      <span class="err">@content;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+:ET

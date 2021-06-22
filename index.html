@@ -28,7 +28,9 @@ layout: default
               </li>
             </ul>
             {{ post.content | truncatewords:60}}</p>
-            <a href="{{ post.url }}" class="plus-link right">read more...</a>
+            {% if words > 60 %}
+              <a href="{{ post.url }}" class="plus-link right">read more...</a>
+            {% endif %}
           </article>
         </li>
       {% endfor %}

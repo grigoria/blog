@@ -1,0 +1,156 @@
+I"�D<p>User experience is most commonly associated with any human-computer interaction and it is used to describe the way people react to a system. We build things for people, so how they experience their interaction with these things is maybe what matters most.</p>
+
+<p>User experience is strongly connected with Web accessibility. Web accessibility is making products and services available to all users, regardless of their physical ability, internet speed, or the device they are using.</p>
+
+<p>Accessibility is very often sidelined due to the small percentage of users suffering from a permanent disability. But making a product more accessible has a very strong impact on how all users are able to interact with it.</p>
+
+<p>Making a Website accessible have different levels and depths. In this blog post, you’ll find what I consider accessibility’s “low hanging fruit”.</p>
+
+<p>By following basic guidelines, you can improve a Website’s accessibility with simple steps.</p>
+
+<h3 id="design">Design</h3>
+
+<p>UI designer is almost always correlated with UX design. People designing for the Web have always in mind designing for user experience. That means that they should have in mind, not only the standard rules of design but also accessibility rules.</p>
+
+<h4 id="contrast-ratio">Contrast ratio</h4>
+
+<p>The term contrast ratio in Web is usually used to describe the contrast of the text or foreground compared to the background. Having a low contrast ratio may result in people not being able to distinguish the foreground or, even worse, the text. Keep in mind that not everyone has a good screen and not everyone has good vision. There are various tools for the Web built to check the contrast ratio between background and text:</p>
+
+<p><a href="https://Webaim.org/resources/contrastchecker/">https://Webaim.org/resources/contrastchecker/</a>
+<a href="http://leaverou.github.io/contrast-ratio/">http://leaverou.github.io/contrast-ratio/</a></p>
+
+<h4 id="animations">Animations</h4>
+
+<p>Using quick animations may be really disturbing for many people, especially those with brain dysfunctions. Also, blinking text and moving text can distract the reader’s attention, so avoid using them.</p>
+
+<h4 id="hover-actions">Hover actions</h4>
+
+<p>Hover actions is a good example of how users without a disability have benefit by accessible designs. Until recently, using action on mouse-over was avoided because hover is an action inaccessible on mobiles. Not using actions on mouse-over also help people that can’t use a mouse or their hand effectively. Instead, use a button that can trigger a popover or window easily accessible by keyboard, too.</p>
+
+<h3 id="text">Text</h3>
+
+<h4 id="zoom">Zoom</h4>
+
+<p>WCAG 2.0 Level AA, Guideline 1.4.4 speaks to the importance of letting the user resize text:</p>
+
+<blockquote>
+  <p>Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality.</p>
+</blockquote>
+
+<p>This guideline states that all Website text must be resizable (zoomable).</p>
+
+<p>The more relevant portion of this guideline is for touch displays and pinch-zooming behaviors. Adding the following in the <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> will disabled zooming:</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0,
+maximum-scale=1.0, user-scalable=no" /&gt;</code></p>
+
+<p>Zooming is commonly disabled for design reasons, but this should be avoided as it removes functionality from the users who want to see enlarged text.</p>
+
+<p>Users with low vision often alter the settings of their browsers to accommodate their needs, so it is important that your design accommodate increased text sizes without loss of readability or functionality. Therefore, it is best to use relative units to specify font sizes rather than absolute units. Users should be able to see enlarged text when they change the default font size in their browser.</p>
+
+<h4 id="contrast-ratio-1">Contrast ratio</h4>
+
+<p>As noted before, the Web Content Accessibility Guidelines define a formula for determining whether there is sufficient contrast between the foreground and the background. Text is much easier to read when there is a sufficient contrast between the text and the background. Tools such as WebAIM’s Color Contrast Checkermake it easy to check contrast thresholds and determine Web Content Accessibility Guidelines compliance.</p>
+
+<h3 id="markup">Markup</h3>
+
+<p>As a general rule of thumb, accessibility works until you break it. That means that by following the Web standards and by having a well structured and semantically correct markup, we follow the basic accessibility rules.</p>
+
+<h4 id="page-elements">Page elements</h4>
+
+<h5 id="semantically-correct-markup">Semantically correct markup</h5>
+
+<p>Replace meaningless <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code>s with more meaningful elements where appropriate. Screen readers read elements from HTML and behave differently. Semantic HTML gives context to screen readers, which read the contents of a Web page out loud. (Read here how each screen reader speaks different elements.).
+Also, avoid reordering with <code class="language-plaintext highlighter-rouge">float: right</code> because it changes the flow of screen readers and in some cases it makes to sense. Same for reordering with flexbox’s <code class="language-plaintext highlighter-rouge">order</code> rule.</p>
+
+<h5 id="page-title">Page title</h5>
+
+<p>A page title is a short title which is unique for each Web page and describes the page content. This is helpful for all users, but is especially helpful for blind users, as the title is typically announced by screen readers as soon as a new page is loaded in the Web browser or a new document is loaded in the reading application.</p>
+
+<h5 id="images">Images</h5>
+
+<p>Every <code class="language-plaintext highlighter-rouge">&lt;img&gt;</code> tag should contain an <code class="language-plaintext highlighter-rouge">&lt;alt&gt;</code> attribute which describes the information or function of the image. The alt tag is used by screen readers to tell blind and visually impaired people what is on the image, so it has to be descriptive and informative of the action/purpose. For example, in the case of an image button which is used as a link to buy product X, the alternate text should be something like “Buy product X now for $19!”.</p>
+
+<p>For purely decorative images, there is no need to write alternative text. The empty alt attribute makes sure that screen readers skip over the image. This is something that I wouldn’t recommend, though. When possible, decorative images should be in your CSS and not in your HTML.</p>
+
+<h5 id="links">Links</h5>
+
+<p>Following the first rule about semantically correct markup, use a link when it is actually a link to another page or another section. Don’t use a link with events on it, because semantically, this is a button, not a <code class="language-plaintext highlighter-rouge">&lt;a href=’#’ onClick=’...’&gt;</code>
+Screen readers read links as “links” so you don’t need to add the word “Link to…” or “Goes to…” in the link title. Use the link title to help the user understand what the link is about, so make it meaningful. Avoid using ambiguous link text, such as ‘click here’ or ‘read more’ and don’t use the same title and text because screen readers read it twice.</p>
+
+<h5 id="headings">Headings</h5>
+
+<p>Section headings are used to organize the content and convey meaning and structure. The structure should be portrayed both in a visual and technical manner, so people can see the structure, and screen readers are able to identify the structure in order to read it out. adding headings is one of the most important ways a screen reader user can use to know what is on the page. So, headings should be descriptive in order to help users find specific content and orient themselves within the Web page.</p>
+
+<h5 id="forms">Forms</h5>
+
+<p>To create an accessible online form, you must ensure that all form fields have accurate labels or prompt so screen reader users know what each field is asking for. Sighted users should be able to visually associate a text label with its corresponding form control. Users with visual disabilities, however, cannot make this visual association but labels can be associated programmatically with form controls using HTML markup. So, every input has to have a label and every label should refer to a unique input.</p>
+
+<p>For example:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">  <span class="o">&lt;</span><span class="nt">div</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nt">label</span> <span class="nt">for</span><span class="o">=</span><span class="s1">"name"</span><span class="o">&gt;</span><span class="nt">First</span> <span class="nt">name</span><span class="o">&lt;/</span><span class="nt">label</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nt">input</span> <span class="nt">id</span><span class="o">=</span><span class="s1">"name"</span> <span class="nt">type</span><span class="o">=</span><span class="s1">"text"</span> <span class="o">/&gt;</span>
+  <span class="o">&lt;/</span><span class="nt">div</span><span class="o">&gt;</span></code></pre></figure>
+
+<p>If you find yourself tempted to use a label for two different inputs, use a <code class="language-plaintext highlighter-rouge">&lt;legend&gt;</code> instead. For example,</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css">  <span class="o">&lt;</span><span class="nt">fieldset</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nt">legend</span><span class="o">&gt;</span><span class="nt">Work</span> <span class="nt">experience</span><span class="o">&lt;/</span><span class="nt">legend</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nt">label</span> <span class="nt">class</span><span class="o">=</span><span class="err">”</span><span class="nt">sr-only</span><span class="err">”</span><span class="o">&gt;</span><span class="nt">From</span><span class="o">&lt;/</span><span class="nt">label</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nt">input</span> <span class="nt">type</span><span class="o">=</span><span class="err">”</span><span class="nt">date</span><span class="err">”</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="nt">label</span> <span class="nt">class</span><span class="o">=</span><span class="err">”</span><span class="nt">sr-only</span><span class="err">”</span><span class="o">&gt;</span><span class="nt">To</span><span class="o">&lt;/</span><span class="nt">label</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nt">input</span> <span class="nt">type</span><span class="o">=</span><span class="err">”</span><span class="nt">date</span><span class="err">”</span> <span class="o">/&gt;</span>
+  <span class="o">&lt;/</span><span class="nt">fieldset</span><span class="o">&gt;</span></code></pre></figure>
+
+<p>where class <code class="language-plaintext highlighter-rouge">.sr-only</code> hides the content visually but allows screen readers to read it.</p>
+
+<h4 id="keyboard-navigation">Keyboard navigation</h4>
+
+<h5 id="tabindex">Tabindex</h5>
+
+<p>A few words about tabindex: The tabindex attribute defines the navigation order for focusable elements (typically links and form controls) within a page. It can also be used to define whether elements should be focusable or not.</p>
+
+<p>The tabindex attribute has three uses:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">tabindex="1"</code> (or any number greater than 1) defines an explicit tab order.</li>
+  <li><code class="language-plaintext highlighter-rouge">tabindex="0"</code> allows elements to receive keyboard focus. It does not change the tab order, but places the element in the navigation flow, as if it were a link.</li>
+  <li><code class="language-plaintext highlighter-rouge">tabindex="-1"</code> removes the element from the default navigation flow and also allows it to receive programmatic focus. This may be useful for elements that should not be navigated to, but need to have the focus set to them. A good example is a modal dialog window: when opened, the focus should be set to the dialog so a screen reader will begin reading and the keyboard will be able to navigate within the dialog. Because the dialog (probably a <code class="language-plaintext highlighter-rouge">&lt;div&gt;</code> element) is not focusable by default, assigning it tabindex=”-1” allows scripting to set focus to it when it is presented.</li>
+</ul>
+
+<p>So, by explicitly changing the tabindex attribute of an item, we change the navigation order, which is generally a bad practice and should be avoided. If you find yourself want to use positive tabindex to rearrange the navigation order, then there is a high chance that you should change the markup instead. Negative tabindex should be avoided too, as it removes the element from the default navigation flow.</p>
+
+<h5 id="semantic-markup-again">Semantic markup (again)</h5>
+
+<p>I won’t say much here as it’s mentioned before. Use semantically correct markup in order to allow keyboard navigation. There is a common mispractice where javascript events are added in divs/spans elements to fake a button effect. For example:</p>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;span class=”fake-link” onclick="hide()"&gt;Hide me&lt;/span&gt;</code></p>
+
+<p>This may work on mouse click, but it’s not accessible with a keyboard or read by screen readers.</p>
+
+<h5 id="accesskey">Accesskey</h5>
+
+<p>Keyboard shortcuts are a standard accessibility feature of most operating systems. Keyboard shortcuts can be useful to all computer users because they often allow for interactions that are faster than allowed by mouse clicks. “Power users” of all abilities frequently use keyboard shortcuts.
+The accesskey HTML attribute allows Web developers to assign certain keyboard shortcuts to Web elements. Starting with HTML 4.0, the accesskey attribute can be added to interactive HTML elements, such as links and form controls. For example:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="o">&lt;</span><span class="nt">a</span> <span class="nt">href</span><span class="o">=</span><span class="s1">"https://www.google.com"</span> <span class="nt">accesskey</span><span class="o">=</span><span class="s1">"g"</span><span class="o">&gt;</span><span class="nt">Google</span><span class="o">&lt;/</span><span class="nt">a</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nt">a</span> <span class="nt">href</span><span class="o">=</span><span class="s1">"https://www.amazon.com"</span> <span class="nt">accesskey</span><span class="o">=</span><span class="s1">"a"</span><span class="o">&gt;</span><span class="nt">Amazon</span><span class="o">&lt;/</span><span class="nt">a</span><span class="o">&gt;</span></code></pre></figure>
+
+<p>One of the biggest problems with accesskey shortcuts is that users are not generally aware that they even exist. There are some ways to notify users that the accesskey shortcuts are available, but the truth is that, due to numerous problems with implementation, many developers choose to avoid them entirely.</p>
+
+<h3 id="aria-attribute-and-roles">Aria attribute and roles</h3>
+
+<p>WAI-ARIA is a technology that can add further semantics that browsers and assistive technologies can recognize and use to let users know what is going on. WAI-ARIA is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility.</p>
+
+<p>There are three main features defined in the spec:
+Roles describe the type of widget presented, such as “menu,” “navitem,” “slider” or the structure of the Web page, such as headings and regions (ex. <code class="language-plaintext highlighter-rouge">role="navigation"</code> or <code class="language-plaintext highlighter-rouge">role="complementary"</code>). Properties define properties of elements, which can be used to give them extra meaning or semantics.
+For example, <code class="language-plaintext highlighter-rouge">aria-required="true"</code> specifies that a form input needs to be filled in to be valid.
+States describe the state widgets are in, such as “checked” for a checkbox, or “disabled” for a button.
+ex. <code class="language-plaintext highlighter-rouge">&lt;a aria-expanded="true"&gt;&lt;div role="checkbox" aria-checked="true"</code></p>
+
+<p>I don’t really consider ARIA an accessibility low hanging fruit, so I won’t go into much detail. There are many possibilities there, and in order to be implemented correctly, requires some more reading. You can begin with the following links which I find very useful:</p>
+
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA">https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA</a>
+<a href="https://www.w3.org/TR/html-aria/#allowed-aria-roles-states-and-properties">https://www.w3.org/TR/html-aria/#allowed-aria-roles-states-and-properties</a></p>
+:ET
