@@ -1,18 +1,60 @@
 body,
 html {
-  background: $color-white;
+  background: $color-stardust;
   height: 100%;
   font-size: 100%;
 }
 
 .wrapper {
   margin: 0 auto;
-  max-width: 780px;
+  max-width: 960px;
   overflow: hidden;
-  width: 98%;
-  padding: 0 1%;
+  width: 94%;
+  padding: 0 3%;
 }
 
+.flex {
+  display: flex;
+  justify-content: space-between;
+
+  .content {
+    width: 79%;
+  }
+
+  aside {
+
+    &.left {
+      padding-right: 2%;
+    }
+
+    &.right {
+      text-align: right;
+      padding-left: 2%;
+    }
+  }
+}
+
+
 @media only screen and (max-width: 640px) {
-  @import 'grid_mobile';
+
+  html {
+    font-size: 80%;
+  }
+
+  .flex {
+    display: inline-grid;
+
+    .content {
+      width: 100%;
+      grid-row: 2;
+    }
+
+    aside {
+
+      &.right {
+        text-align: left;
+        padding-left: 0;
+      }
+    }
+  }
 }

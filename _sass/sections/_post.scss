@@ -2,94 +2,93 @@
   Page about each blogpost
 */
 
-.posts {
+.post {
+  padding-top: 60px;
+  padding-bottom: 80px;
+  background: $color-white-bg;
 
-  .tags > li {
-    display: block;
-    margin-bottom: 10px;
+  .date {
+    text-align: center;
+    width: 19%;
+    color: $color-pint;
+    padding-top: 3px;
   }
 
-  article {
+  .read-time {
+    margin-bottom: 60px;
+  }
 
-    h2 {
-      margin-bottom: 40px;
-    }
-
-    h3,
-    h4 {
-      margin: 60px 0 30px;
-      line-height: 1.4;
-      font-size: 1.5rem;
-      color: $primary-gray;
-      padding-bottom: 10px;
-      margin-top: 40px;
-      margin-bottom: 30px;
-    }
+  /*
+    Format post
+  */
+  .content article {
 
     h3 {
-      border-bottom: 1px solid $grey4;
+      font-size: 20px;
+      padding-bottom: 20px;
+      margin: 40px 0;
+      border-bottom: 1px solid #ccc;
     }
 
     h4 {
-      margin-bottom: 15px;
+      font-size: 18px;
+      margin: 40px 0 20px;
     }
 
     h5 {
-      font-size: 1.2rem;
-      color: #3e3e3e;
-      padding-bottom: 10px;
-      margin-top: 40px;
-      margin-bottom: 15px;
-      font-weight: 600;
+      color: $color-grey80;
+      margin: 40px 0 20px;
+    }
+  }
+}
+
+.other-posts {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(206, 206, 224, 0.5);
+
+  .heading {
+    margin-bottom: 15px;
+  }
+
+  .next,
+  .previous {
+    position: relative;
+
+    &:before {
+      content: '';
+      width: 24px;
+      height: 13px;
+      position: absolute;
+      top: 0;
     }
 
-    p {
-      margin-bottom: 30px;
-    }
-
-    .sidebar {
-      float: left;
-      width: 200px;
-      margin-right: -100%;
-
-      .tweet-this {
-        margin-top: 20px;
-      }
-    }
-
-    .content {
-      width: 100%;
-      margin-bottom: 60px;
-
-      > * {
-        margin-left: 200px;
-      }
-    }
-
-    img {
-      max-width: 100%;
+    h6 a {
+      text-decoration: none;
     }
   }
 
-  .previous-article {
-    float: left;
-    padding-left: 20px;
-    text-align: left;
+  .next {
+    padding-left: 40px;
 
-    &::after {
-      content: '\2039';
+    &:before {
       left: 0;
+      background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2213%22%20fill%3D%22none%22%20xmlns%3Av%3D%22https%3A%2F%2Fvecta.io%2Fnano%22%3E%3Cpath%20d%3D%22M6.5%200L0%206.5%206.5%2013l.707-.707L1.914%207H24V6H1.914L7.207.707%206.5%200z%22%20fill%3D%22%23e2183d%22%2F%3E%3C%2Fsvg%3E");
     }
   }
 
-  .next-article {
+  .previous {
     float: right;
-    padding-right: 20px;
-    text-align: right;
+    margin-top: 40px;
+    padding-right: 40px;
 
-    &::after {
-      content: '\203A';
+    &:before {
       right: 0;
+      background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2214%22%20fill%3D%22none%22%20xmlns%3Av%3D%22https%3A%2F%2Fvecta.io%2Fnano%22%3E%3Cpath%20d%3D%22M17.5%2013.5L24%207%2017.5.5l-.707.707L22.086%206.5H0v1h22.086l-5.293%205.293.707.707z%22%20fill%3D%22%23e2183d%22%2F%3E%3C%2Fsvg%3E");
+    }
+
+    .heading {
+      text-align: right;
     }
   }
 }
@@ -102,14 +101,28 @@
   margin: 40px 0;
 }
 
-.embed-tweet {
-  margin-bottom: 40px;
-}
-
-@media only screen and (max-width: 960px) {
-  @import 'post_tablet';
+.tweet-this {
+  margin-top: 30px;
 }
 
 @media only screen and (max-width: 640px) {
-  @import 'post_mobile';
+
+  .post {
+
+    .date {
+      width: 100%;
+      text-align: left;
+      margin-bottom: 10px;
+
+      span {
+        float: left;
+      }
+    }
+
+    .tweet-this {
+      margin-top: 0;
+      float: right;
+    }
+  }
+
 }

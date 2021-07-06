@@ -2,14 +2,25 @@
   FONTS
 */
 
-$text-font: Helvetica, Arial, Sans, Sans-Serif, Sans Serif;
+$text-paragraph: 'Montserrat', sans-serif;
+$text-secondary: 'Lato', sans-serif;
 $code-font: "Courier New", monospace;
 
 /*
   COLORS
 */
 
-$color-white: #fefefb;
+$color-white: #fff;
+$color-white-bg: #f9f9f9;
+$color-grey80: #333;
+$color-grey55: #707070;
+$color-grey18: #ccc;
+$color-naxos: #7EF8CC;
+$color-pint: #317D71;
+$color-cherry: #E2183D;
+$color-stardust: #2C2C4B;
+
+/* OLD */
 
 $primary-gray: #3e3e3e;
 $primary-color: #6D5B97;

@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="blog">
+  <div class="wrapper">
+    <ul>
+      {% for post in site.posts %}
+        <li class="article flex">
+          <aside class="date left">
+            {{ post.date | date_to_string }}
+          </aside>
+          <div class="content">
+            <h5>
+              <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+            </h5>
+
+            {% include read_time.html %}
+
+            {{ post.content | truncatewords:60}}
+            {% if words > 60 %}
+              <p class="read-more">
+                <a href="{{ post.url }}">read more</a>
+              </p>
+            {% endif %}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

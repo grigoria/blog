@@ -1,39 +1,113 @@
 ---
-layout: default
+layout: index
 ---
 
-<div class="main">
+<section class="intro">
   <div class="wrapper">
-    <ul class="articles-list">
-      {% for post in site.posts limit 20 %}
+    <div class="container">
+      <h2>
+        Hello! I'm Grigoria – a User experience designer, focused on designing and implementing inclusive interfaces.
+      </h2>
+      <h3>With a background in front-end development, I am skilled in tackling complex UX
+        design problems, as well as collecting and analysing qualitative and quantitative data
+        and transforming it into actionable insights.</h3>
+      <h3>You can find me on <a href="https://gr.linkedin.com/in/grigoria-pontiki-ab93a939" target="_blank">LinkedIn</a> and <a href="https://twitter.com/grigoriap" target="_blank">Twitter</a>, or you can <a href="mailto: grigoria.pontiki@gmail.com" target="_blank">drop me a line</a>.</h3>
+    </div>
+    <ul class="social-icons-ul">
+      <li>
+        <a href="https://gr.linkedin.com/in/grigoria-pontiki-ab93a939" target="_blank" class="icon-linkedin"></a>
+      </li>
+      <li>
+        <a href="https://twitter.com/grigoriap" target="_blank" class="icon-twitter"></a>
+      </li>
+      <li>
+        <a href="mailto: grigoria.pontiki@gmail.com" target="_blank" class="icon-email"></a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="latest-posts">
+  <div class="wrapper">
+    <h4 class="heading">Latest from the blog</h4>
+    <ul>
+      {% for post in site.posts limit:1 %}
         <li>
-          <article class="cf">
-            <h2>
-              <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-            </h2>
-            <ul class="tags cf">
-              <li class="icon-tag">
-                {% for tag in post.tags %}
-                  <span>{{tag}}</span>
-                {% endfor %}
-              </li>
-              <li class="icon-calendar">{{ post.date | date_to_string }}</li>
-              <li class="icon-book">
-                {% assign words = post.content | number_of_words %}
-                {% if words < 360 %}
-                  1 min read
-                {% else %}
-                  {{ words | divided_by:180 }} min read
-                {% endif %}
-              </li>
-            </ul>
-            {{ post.content | truncatewords:60}}</p>
-            {% if words > 60 %}
-              <a href="{{ post.url }}" class="plus-link right">read more...</a>
-            {% endif %}
+          <div class="article flex">
+            <div class="content">
+              <h5 class="large">
+                <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+              </h5>
+              {{ post.content | truncatewords:60}}</p>
+              {% if words > 60 %}
+                <a href="{{ post.url }}" class="plus-link right">read more...</a>
+              {% endif %}
+            </div>
+            <aside class="date right">
+              {{ post.date | date_to_string }}
+            </aside>
+          </div>
+        </li>
+      {% endfor %}
+      {% for post in site.posts offset:1 limit:4 %}
+        <li>
+          <div class="article flex">
+            <div class="content">
+              <h5>
+                <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+              </h5>
+            </div>
+            <aside class="date right">
+              {{ post.date | date_to_string }}
+            </aside>
           </article>
         </li>
       {% endfor %}
     </ul>
+    <a href="blog.html" title="Blog" class="more">more articles</a>
   </div>
-</div>
+</section>
+
+<section class="about_me">
+  <div class="wrapper">
+    <h4 class="heading">About me</h4>
+    <p>
+      A goal-oriented User experience designer with a background in front-end development. Experienced in tackling complex UX design problems, as well as collecting and analysing qualitative and quantitative data and transforming it into actionable insights. I am seeking a challenging opportunity in a growing team where I can contribute from ideation to post-release monitoring and continue to develop experience in a professional community.
+    </p>
+    <h5>
+      Qualifications
+    </h5>
+    <ul class="qualifications">
+      <li>Interaction design</li>
+      <li>Product design</li>
+      <li>Quantitative research</li>
+      <li>Qualitative research</li>
+      <li>Development</li>
+      <li>Accessibility</li>
+    </ul>
+    <h5>
+      Professional Experience
+    </h5>
+    <ul class="experience">
+      <li class="flex">
+        <div class="content">
+          <strong>Workable</strong> - User Experience Researcher</span>
+        </div>
+        <aside class="date right">Nov 2018 - present</aside>
+      </li>
+      <li class="flex">
+        <div class="content">
+          <strong>Workable</strong> - User Interface Engineer</span>
+        </div>
+        <aside class="date right">Nov 2015 - Nov 2018</aside>
+      </li>
+      <li class="flex">
+        <div class="content">
+          <strong>Skroutz.gr</strong> - User Interface Engineer - User Experience Designer</span>
+        </div>
+        <aside class="date right">Nov 2012 - Nov 2015</aside>
+      </li>
+    </ul>
+    <a href="resume.html" title="Resume" class="more">more about me</a>
+  </div>
+</section>

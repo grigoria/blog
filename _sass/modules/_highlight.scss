@@ -42,25 +42,25 @@
 // Inline code
 
 code:not(.language-css) {
-  background: $color-white;
   padding: 0 3px;
   font-family: $code-font;
   font-size: 1.1rem;
+  font-weight: bold;
 }
 
 blockquote {
-  border-left: 7px solid $grey4;
+  border-left: 7px solid $color-grey18;
   margin: 20px 0;
   padding: 5px 20px;
   quotes: "\201C""\201D""\2018""\2019";
   font-size: 19px;
   line-height: 1.6;
-  font-family: $text-font;
-  color: $primary-gray;
+  font-family: $text-paragraph;
+  color: $color-grey80;
   font-style: italic;
 
   &::before {
-    color: $grey4;
+    color: $color-grey18;
     content: open-quote;
     font-size: 60px;
     line-height: 0.1em;

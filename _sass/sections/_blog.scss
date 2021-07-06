@@ -1,0 +1,28 @@
+.blog {
+  padding-top: 60px;
+  background: $color-white-bg;
+
+  .date {
+    text-align: center;
+    width: 19%;
+    color: $color-pint;
+  }
+
+  li {
+    margin-bottom: 40px;
+  }
+
+  .read-more {
+    float: right;
+    font-size: 14px;
+    color: $color-grey80;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+
+  .blog .date {
+    width: 100%;
+    text-align: left;
+  }
+}

@@ -1,8 +1,19 @@
-<span>
-  {% assign words = content | number_of_words %}
-  {% if words < 360 %}
-    1 min read
-  {% else %}
-    {{ words | divided_by:180 }} min read
-  {% endif %}
-</span>
+{% if page.layout == 'post' %}
+  <div class="read-time icon-book">
+    {% assign words = page.content | number_of_words %}
+    {% if words < 360 %}
+      <small class="small">1 min read</small>
+    {% else %}
+      <small class="small">{{ words | divided_by:180 }} mins read</small>
+    {% endif %}
+  </div>
+{% else %}
+  <div class="read-time icon-book">
+    {% assign words = post.content | number_of_words %}
+    {% if words < 360 %}
+      <small class="small">1 min read</small>
+    {% else %}
+      <small class="small">{{ words | divided_by:180 }} min read</small>
+    {% endif %}
+  </div>
+{% endif %}

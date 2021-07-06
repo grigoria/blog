@@ -1,37 +1,51 @@
-<div class="title cf">
-  <h2>{{page.title}}</h2>
-</div>
+<div class="post">
+  <div class="wrapper flex article">
 
-<div class="sidebar">
-  <ul class="tags">
-    <li class="icon-calendar">{{ page.date | date_to_string }}</li>
-    <li class="icon-tag">
-      {% for tag in page.tags %}
-        <span>{{tag}}</span>
-      {% endfor %}
-    </li>
-      <li class="icon-book">{% include read_time.html %}</li>
-  </ul>
+    <aside class="date left">
+      <span>{{ page.date | date_to_string }}</span>
 
-  <div class="tweet-this">
-    <a href="https://twitter.com/share" class="twitter-share-button" data-via="grigoriap" data-size="large" data-count="none">Tweet</a>
+      <div class="tweet-this">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="grigoriap" data-size="large" data-count="none">Tweet</a>
+      </div>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    </aside>
+
+    <div class="content">
+      <h5 class="large">
+        {{page.title}}
+      </h5>
+
+      {% include read_time.html %}
+
+      <article>
+      	{{ content }}
+      </article>
+
+      <div class="other-posts">
+        {% if page.previous %}
+        <div class="next">
+            <h6 class="heading">
+              <a href="{{ page.previous.url }}">Previous Post</a>
+            </h6>
+            <h5 class="large">
+              <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
+            </h5>
+        </div>
+        {% endif %}
+        {% if page.next %}
+          <div class="previous">
+              <h6 class="heading">
+                <a href="{{ page.next.url }}">Next Post</a>
+              </h6>
+              <h5 class="large">
+                <a href="{{ page.next.url }}">{{ page.next.title }}</a>
+              </h5>
+          </div>
+        {% endif %}
+      </div>
+
+      {% include disqus.html %}
+    </div>
+
   </div>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </div>
-
-<div class="content">
-	{{ content }}
-</div>
-
-<div class="cf">
-  {% if page.previous %}
-  <a href="{{ page.previous.url }}" class="btn left">Previous Post</a>
-  {% endif %}
-  {% if page.next %}
-    <a href="{{ page.next.url }}" class="btn right">Next Post</a>
-  {% else %}
-    <a href="/" class="btn right">Home</a>
-  {% endif %}
-</div>
-
-{% include disqus.html %}

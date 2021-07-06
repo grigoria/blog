@@ -1,288 +1,110 @@
-@keyframes slideDown {
-    from {
-      bottom: -10px;
-    }
-    to {
-      bottom: -20px;
-    }
-}
-
-#resume {
-  font-family: $text-font;
-
-  .wrapper {
-    overflow: visible;
-  }
-
-  h2 {
-    text-transform: uppercase;
-    font-size: 17px;
-    color: $primary-gray;
-    margin-bottom: 2em;
-  }
-
-  li {
-    line-height: 2;
-  }
-
-  .more {
-    font-size: 17px;
-    margin-top: 20px;
-    display: inline-block;
-    transition: all, 0, ease;
-  }
-
-  .about-me {
-    padding-top: 10%;
-    font-family: $text-font;
-
-    p {
-      color: $primary-gray;
-      font-size: 20px;
-    }
-
-    .social-icons-ul {
-      margin: 60px 0;
-
-      li a {
-        font-size: 30px;
-      }
-
-      .icon-twitter {
-        font-size: 25px;
-      }
-
-      li:not(:last-of-type):after {
-        font-size: 20px;
-      }
-    }
-  }
-
-  .intro {
-    background: $color-white;
-    padding: 80px 0;
-    font-family: $text-font;
-
-    p {
-      font-size: 18px;
-    }
-
-    span {
-      color: $primary-gray;
-      display: block;
-      margin-top: 1.4em;
-    }
-  }
-
-  nav {
-    padding: 80px 0;
-
-    li {
-      display: inline-block;
-      width: 32%;
-      text-align: center;
-      font-size: 16px;
-
-      a {
-        text-transform: uppercase;
-        position: relative;
-
-        &:hover:after {
-          content: "\25BC";
-          position: absolute;
-          left: 50%;
-          bottom: -20px;
-          font-size: 11px;
-          animation: slideDown .3s linear;
-        }
-      }
-    }
-  }
-
-  .areas-of-expertise {
-    background: $color-white;
-    padding: 80px 0 40px;
-
-    h2 span {
-      display: block;
-      text-transform: none;
-      font-weight: normal;
-      margin-top: 20px;
-    }
-
-    ul {
-      margin: 40px 0 20px;
-      list-style-type: disc;
-
-      li {
-        margin-left: 20px;
-        color: $primary-gray;
-        font-size: 18px;
-      }
-    }
-  }
-
-  .areas-expand {
-
-    h3 {
-      display: inline-block;
-      color: $primary-gray;
-      font-size: 15px;
-      padding: 0 40px 10px 0;
-      border-bottom: 1px solid #dcdcdc;
-    }
-
-    ul {
-      margin-top: 20px;
-
-      li {
-        margin-bottom: .9em;
-      }
-    }
-
-    section {
-      margin-bottom: 60px;
-    }
-  }
+.resume {
+  padding-top: 60px;
+  background: $color-white-bg;
 
   .experience {
-    padding: 80px 0 40px;
 
     ul {
       list-style-type: disc;
 
-      &:not(:last-of-type) {
-        margin-bottom: 40px;
-      }
-
       li {
-        margin-left: 20px;
-        padding-left: 20px;
-        font-size: 18px;
-        line-height: 1.5;
-        margin-bottom: 15px;
+        list-style-position: inside;
 
-        h3 {
-          font-size: 17px;
-          line-height: 1.7;
-
-          span {
-            float: right;
-          }
-
-          &:nth-of-type(2) {
-            margin-bottom: 40px;
-            color: $color-gray34;
-
-            span {
-              margin-top: 0;
-            }
-          }
-        }
-
-        p {
-          clear: both;
-          font-size: 18px;
-        }
-
-        .more {
-          font-size: 14px;
-          margin-top: 0;
-        }
-
-        .description {
-          padding-left: 160px;
-          position: relative;
-
-          &:before {
-            content: "";
-            width: 130px;
-            height: 22px;
-            position: absolute;
-            top: 5px;
-            left: 0;
-            background-repeat: no-repeat;
-          }
-        }
-
-        &.workable {
-
-          .description:before {
-            background-image: url('/images/resume/logo-workable.png');
-            background-image: url('/images/resume/logo-workable.svg');
-          }
-        }
-
-        &.skroutz {
-
-          .description:before {
-            background-image: url('/images/resume/logo-skroutz.png');
-            background-image: url('/images/resume/logo-skroutz.svg');
-          }
+        ul {
+          margin: 10px 0 0 40px;
         }
       }
-    }
-
-    .job-listing > li {
-      margin-bottom: 60px;
-      
-      &:not(:last-of-type) {
-        padding-bottom: 60px;
-        border-bottom: 1px solid #dcdcdc;
-      }
-    }
-
-    h4 {
-      margin-bottom: 1.2em;
     }
   }
 
-  .more-about-me {
-    background: $color-white;
-    padding: 80px 0;
+  .flex {
+    margin-bottom: 40px;
+  }
 
-    p {
-      font-size: 18px;
+  section {
+    margin-bottom: 60px;
+
+    &.objective .heading { width: 150px; }
+    &.qualifications .heading { width: 320px; }
+    &.experience .heading { width: 310px; }
+    &.education .heading { width: 150px; }
+    &.certificates .heading { width: 180px; }
+    &.volunteer .heading { width: 220px; }
+    &.languages .heading { width: 160px; }
+  }
+
+  .heading {
+    color: inherit;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $color-grey80;
+    padding-bottom: 15px;
+  }
+
+  .experience,
+  .education,
+  .volunteer {
+
+    .title {
+
+      strong {
+        line-height: 30px;
+      }
+
+      span {
+        margin-bottom: 30px;
+        display: block;
+        line-height: 20px;
+      }
+    }
+
+    .date span {
+      line-height: 25px;
     }
   }
 
-  .links-bottom {
-    text-align: center;
-    margin: 80px 0;
+  .qualifications,
+  .certificates {
 
-    li {
-      display: inline-block;
-
-      a {
-        display: inline-block;
-        padding: 15px 30px;
-        background: $primary-color;
-        border-radius: 3px;
-        margin: 0 10px;
-        text-transform: uppercase;
-        font-size: 15px;
-        color: $color-white;
-
-        &:hover {
-          color: $color-white;
-          background: darken($primary-color, 5%);
-        }
-      }
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 44%);
+      column-gap: 12%;
     }
+  }
 
-    .linkedin a {
-      background: $color-linkedin;
+  .certificates {
 
-      &:hover {
-        background: darken(#0077B5, 5%);
-      }
+    strong {
+      display: block;
     }
   }
 }
 
+@media only screen and (max-width: 640px) {
 
-/* Media Queries: Tablet devices overwrite 641px...960px */
- 
-@media only screen and (max-width:640px) {
-  @import "resume_mobile";
+  .resume {
+
+    .flex {
+      margin-bottom: 0;
+    }
+
+    .qualifications,
+    .certificates {
+
+      ul {
+        display: block;
+
+        li {
+          margin-bottom: 25px;
+        }
+      }
+    }
+
+    .experience .flex:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
 }

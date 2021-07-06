@@ -26,10 +26,6 @@
   margin-left: 0.2em;
 }
 
-.icon-github::before {
-  content: '\e800';
-}
-
 .icon-linkedin::before {
   content: '\e801';
 }
@@ -38,27 +34,15 @@
   content: '\e802';
 }
 
-.icon-email::before {
-  content: '\e803';
-}
-
-.icon-facebook::before {
-  content: '\e804';
-}
-
-.icon-tag::before {
-  content: '\e805';
-}
-
 .icon-calendar::before {
   content: '\e806';
 }
 
-.icon-location::before {
-  content: '\e807';
-}
-
 .icon-book::before {
   content: '\e808';
+}
+
+.icon-email::before {
+  content: '\e803';
 }
 

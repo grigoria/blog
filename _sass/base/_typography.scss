@@ -1,25 +1,19 @@
 body {
-  font-family: $text-font;
+  font-family: $text-paragraph;
   -webkit-font-smoothing: antialiased;
 }
 
 p,
 ul li,
 ol li {
-  color: $color-text;
-  font-size: 1.2rem;
+  color: $color-grey80;
+  font-size: 16px;
   line-height: 1.5;
-  margin-bottom: 1.4em;
+  margin-bottom: 15px;
 }
 
-a,
-a:visited {
-  color: $secondary-link;
-}
-
-a:hover {
-  transition: all 0.1s ease;
-  text-decoration: none;
+strong {
+  font-weight: 700;
 }
 
 ::selection {
@@ -30,6 +24,18 @@ a:hover {
   background: #fde8e8;
 }
 
+a,
+a:visited,
+a:hover {
+  transition: all 0.3s ease;
+  color: inherit;
+  text-decoration-color: inherit;
+}
+
+a:hover {
+  text-decoration-color: transparent;
+}
+
 ol {
   list-style-position: inside;
 }
@@ -38,12 +44,94 @@ em {
   font-style: italic;
 }
 
-.plus-link,
-.plus-link:visited {
-  font-size: 14px;
-  text-decoration: none;
+.heading {
+  color: $color-cherry;
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
 
-  &:hover {
-    text-decoration: underline;
+article,
+.article,
+.other-posts {
+
+  h5 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.4;
+    color: $color-stardust;
+
+    &.large {
+      font-size: 20px;
+    }
+  }
+}
+
+.date {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: $text-secondary;
+  color: $color-grey55;
+  text-transform: uppercase;
+}
+
+.more {
+  float: right;
+  position: relative;
+  font-size: 15px;
+  font-weight: 700;
+  padding-right: 30px;
+  color: $color-grey80;
+  margin-top: 20px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 18px;
+    height: 10px;
+    background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2219%22%20height%3D%2211%22%20fill%3D%22none%22%20xmlns%3Av%3D%22https%3A%2F%2Fvecta.io%2Fnano%22%3E%3Cpath%20d%3D%22M15.083%206.637l-2.407%202.541%201.315%201.383%204.664-4.905L13.992.751l-1.315%201.383%202.407%202.541H0v1.962h15.083z%22%20fill%3D%22%23333%22%2F%3E%3C%2Fsvg%3E") no-repeat;
+  }
+}
+
+.small {
+  color: $color-grey55;
+  font-size: 13px;
+}
+
+.read-time {
+  position: relative;
+  padding-left: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 1.4;
+
+  &:before {
+    color: $color-grey55;
+    position: absolute;
+    top: 4px;
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+
+  article,
+  .article,
+  .other-posts {
+
+    h5.large {
+      font-size: 18px;
+    }
+  }
+
+  .heading {
+    margin-bottom: 30px;
+  }
+
+  .read-time {
+    margin-bottom: 20px;
   }
 }

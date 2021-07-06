@@ -3,22 +3,17 @@
 
 // BASE
 @import 'base/variables';
-@import 'base/helpers';
 @import 'base/grid';
 @import 'base/fonts';
 @import 'base/typography';
-@import 'base/tags';
-@import 'base/buttons';
 
 // MODULES
 @import 'modules/header';
 @import 'modules/footer';
-@import 'modules/article';
 @import 'modules/highlight';
 
 // SECTIONS
 @import 'sections/index';
 @import 'sections/post';
-@import 'sections/resume';
-@import 'sections/index';
+@import 'sections/blog';
 @import 'sections/resume';
